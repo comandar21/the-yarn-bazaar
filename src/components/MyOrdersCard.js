@@ -37,7 +37,7 @@ const MyOrdersCard = ({navigation}) => {
   return (
     <Card>
       <View>
-        <Text style={{color: 'orange', margin: 5}}>Planned</Text>
+        <Text style={{color: '#ffbf00', margin: 5}}>Planned</Text>
       </View>
       <View style={{flexDirection: 'row'}}>
         <View style={{flex: 1, margin: 5}}>
@@ -95,7 +95,7 @@ const MyOrdersCard = ({navigation}) => {
         <View style={{flex: 1}}>
           <TouchableOpacity
             style={{
-              backgroundColor: 'orange',
+              backgroundColor: '#ffbf00',
               margin: 10,
               width: null,
               height: 40,
@@ -116,10 +116,10 @@ const MyOrdersCard = ({navigation}) => {
               borderRadius: 5,
               justifyContent: 'center',
               alignItems: 'center',
-              borderColor: 'orange',
+              borderColor: '#ffbf00',
               borderWidth: 1,
             }}>
-            <Text style={{color: 'orange'}}>More Info</Text>
+            <Text style={{color: '#ffbf00'}}>More Info</Text>
           </TouchableOpacity>
         </View>
       </View>

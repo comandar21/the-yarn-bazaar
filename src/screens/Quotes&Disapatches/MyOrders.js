@@ -61,7 +61,7 @@ const MyOrders = ({navigation}) => {
         <View style={{flex: 1}}>
           <TouchableOpacity
             style={{
-              backgroundColor: 'orange',
+              backgroundColor: '#ffbf00',
               margin: 10,
               width: null,
               height: 40,
@@ -127,7 +127,7 @@ const style = StyleSheet.create({
     marginTop: 5,
     borderRadius: 5,
     marginLeft: 5,
-    backgroundColor: 'orange',
+    backgroundColor: '#ffbf00',
   },
 
   text: {

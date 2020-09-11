@@ -21,11 +21,34 @@ import {
 import {StyleSheet, TouchableOpacity, Image, StatusBar} from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
-import LinearGradient from 'react-native-linear-gradient';
-import * as Animatable from 'react-native-animatable';
-import {color} from 'react-native-reanimated';
+import StepIndicator from 'react-native-step-indicator';
 
 const MyOrdersCard = ({navigation}) => {
+  const labels = ['Planned', 'Dispatched', 'Received', 'Closed'];
+  const customStyles = {
+    stepIndicatorSize: 25,
+    currentStepIndicatorSize: 30,
+    separatorStrokeWidth: 3,
+    currentStepStrokeWidth: 3,
+    stepStrokeCurrentColor: '#ffbf00',
+    stepStrokeWidth: 3,
+    stepStrokeFinishedColor: '#ffbf00',
+    stepStrokeUnFinishedColor: '#aaaaaa',
+    separatorFinishedColor: '#ffbf00',
+    separatorUnFinishedColor: '#aaaaaa',
+    stepIndicatorFinishedColor: '#ffbf00',
+    stepIndicatorUnFinishedColor: '#ffffff',
+    stepIndicatorCurrentColor: '#ffffff',
+    stepIndicatorLabelFontSize: 13,
+    currentStepIndicatorLabelFontSize: 13,
+    stepIndicatorLabelCurrentColor: '#ffbf00',
+    stepIndicatorLabelFinishedColor: '#ffffff',
+    stepIndicatorLabelUnFinishedColor: '#aaaaaa',
+    labelColor: '#999999',
+    labelSize: 13,
+    currentStepLabelColor: '#ffbf00',
+  };
+
   const pressHandler = () => {
     navigation.navigate('Splashscreen');
   };
@@ -33,7 +56,7 @@ const MyOrdersCard = ({navigation}) => {
   return (
     <Card>
       <View>
-        <Text style={{color: 'orange', margin: 5}}>Planned</Text>
+        <Text style={{color: '#ffbf00', margin: 5}}>Planned</Text>
       </View>
       <View style={{flexDirection: 'row'}}>
         <View style={{flex: 1, margin: 5}}>
@@ -51,14 +74,21 @@ const MyOrdersCard = ({navigation}) => {
         </View>
         <View style={{flex: 3, margin: 5}}>
           <Text style={{marginTop: 5}}>SINTEX MILLS</Text>
-          <Text style={{color: 'orange'}}>61sCotton,Combed</Text>
+          <Text style={{color: '#ffbf00'}}>61sCotton,Combed</Text>
         </View>
       </View>
-      <View>
+      <View style={{marginLeft: 10}}>
         <Text>Quantity - 9 Tons</Text>
       </View>
-      <View></View>
-      <View style={{margin: 5}}>
+      <View style={{marginTop: 10}}>
+        <StepIndicator
+          stepCount={4}
+          customStyles={customStyles}
+          labels={labels}
+          currentPosition={2}
+        />
+      </View>
+      <View style={{marginLeft: 10}}>
         <Text style={style.cardtext}>
           Estimated Date of Receving : 31/08/20
         </Text>
@@ -67,7 +97,7 @@ const MyOrdersCard = ({navigation}) => {
         <View style={{flex: 1}}>
           <TouchableOpacity
             style={{
-              backgroundColor: 'orange',
+              backgroundColor: '#ffbf00',
               margin: 10,
               width: null,
               height: 40,
@@ -88,10 +118,10 @@ const MyOrdersCard = ({navigation}) => {
               borderRadius: 5,
               justifyContent: 'center',
               alignItems: 'center',
-              borderColor: 'orange',
+              borderColor: '#ffbf00',
               borderWidth: 1,
             }}>
-            <Text style={{color: 'orange'}}>More Info</Text>
+            <Text style={{color: '#ffbf00'}}>More Info</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -123,7 +153,7 @@ const style = StyleSheet.create({
     marginTop: 5,
     borderRadius: 5,
     marginLeft: 5,
-    backgroundColor: 'orange',
+    backgroundColor: '#ffbf00',
   },
 
   text: {

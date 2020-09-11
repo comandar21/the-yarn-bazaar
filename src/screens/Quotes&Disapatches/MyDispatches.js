@@ -40,21 +40,23 @@ const MyDispatches = ({navigation}) => {
     <View style={style.container}>
       <View style={(style.rowbutton, {margin: 5})}>
         <ScrollView horizontal={true}>
-          <Button style={style.button}>
-            <Text style={style.text}>All</Text>
-          </Button>
-          <Button style={style.button}>
-            <Text style={style.text}>Planned</Text>
-          </Button>
-          <Button style={style.button}>
-            <Text style={style.text}>Dispatched</Text>
-          </Button>
-          <Button style={style.button}>
-            <Text style={style.text}>Received</Text>
-          </Button>
-          <Button style={style.button}>
-            <Text style={style.text}>Received</Text>
-          </Button>
+          <Content>
+            <Button style={style.button}>
+              <Text style={style.text}>All</Text>
+            </Button>
+            <Button style={style.button}>
+              <Text style={style.text}>Planned</Text>
+            </Button>
+            <Button style={style.button}>
+              <Text style={style.text}>Dispatched</Text>
+            </Button>
+            <Button style={style.button}>
+              <Text style={style.text}>Received</Text>
+            </Button>
+            <Button style={style.button}>
+              <Text style={style.text}>Received</Text>
+            </Button>
+          </Content>
         </ScrollView>
       </View>
       <Content style={{margin: 10}}>
@@ -65,7 +67,7 @@ const MyDispatches = ({navigation}) => {
       <View>
         <TouchableOpacity
           style={{
-            backgroundColor: 'orange',
+            backgroundColor: '#ffbf00',
             margin: 10,
             width: null,
             height: 40,
@@ -104,7 +106,7 @@ const style = StyleSheet.create({
     marginTop: 5,
     borderRadius: 5,
     marginLeft: 5,
-    backgroundColor: 'orange',
+    backgroundColor: '#ffbf00',
   },
 
   text: {

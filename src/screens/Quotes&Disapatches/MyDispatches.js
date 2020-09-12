@@ -38,46 +38,27 @@ const MyDispatches = ({navigation}) => {
 
   return (
     <View style={style.container}>
-      <View style={(style.rowbutton, {margin: 5})}>
-        <ScrollView horizontal={true}>
-          <Content>
-            <Button style={style.button}>
-              <Text style={style.text}>All</Text>
-            </Button>
-            <Button style={style.button}>
-              <Text style={style.text}>Planned</Text>
-            </Button>
-            <Button style={style.button}>
-              <Text style={style.text}>Dispatched</Text>
-            </Button>
-            <Button style={style.button}>
-              <Text style={style.text}>Received</Text>
-            </Button>
-            <Button style={style.button}>
-              <Text style={style.text}>Received</Text>
-            </Button>
-          </Content>
-        </ScrollView>
-      </View>
-      <Content style={{margin: 10}}>
-        <MyDispatchesCards />
-        <MyDispatchesCards />
-        <MyDispatchesCards />
+      <Content style={{margin: 5}}>
+        <View>
+          <MyDispatchesCards />
+          <MyDispatchesCards />
+          <MyDispatchesCards />
+        </View>
+        <View>
+          <TouchableOpacity
+            style={{
+              backgroundColor: '#E28135',
+              margin: 10,
+              width: null,
+              height: 40,
+              borderRadius: 5,
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}>
+            <Text style={{color: 'white'}}>Planed Dispatch</Text>
+          </TouchableOpacity>
+        </View>
       </Content>
-      <View>
-        <TouchableOpacity
-          style={{
-            backgroundColor: '#ffbf00',
-            margin: 10,
-            width: null,
-            height: 40,
-            borderRadius: 5,
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}>
-          <Text style={{color: 'white'}}>Planed Dispatch</Text>
-        </TouchableOpacity>
-      </View>
     </View>
   );
 };
@@ -106,7 +87,7 @@ const style = StyleSheet.create({
     marginTop: 5,
     borderRadius: 5,
     marginLeft: 5,
-    backgroundColor: '#ffbf00',
+    backgroundColor: '#E28135',
   },
 
   text: {

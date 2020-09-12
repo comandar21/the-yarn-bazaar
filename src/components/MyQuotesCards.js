@@ -38,10 +38,10 @@ const MyOrdersCard = ({navigation}) => {
   return (
     <Card>
       <View>
-        <Text style={{color: '#ffbf00', margin: 5}}>Active</Text>
+        <Text style={{color: '#E28135', margin: 5}}>Active</Text>
       </View>
       <View style={{flexDirection: 'row'}}>
-        <View style={{flex: 1, margin: 5}}>
+        <View style={{flex: 1, margin: 3}}>
           <Card style={{borderRadius: 5}}>
             <TouchableOpacity>
               <View
@@ -89,8 +89,8 @@ const MyOrdersCard = ({navigation}) => {
       <View>
         <TouchableOpacity
           style={{
-            backgroundColor: '#ffbf00',
-            margin: 10,
+            backgroundColor: '#E28135',
+            margin: 5,
             width: null,
             height: 40,
             borderRadius: 5,
@@ -128,7 +128,7 @@ const style = StyleSheet.create({
     marginTop: 5,
     borderRadius: 5,
     marginLeft: 5,
-    backgroundColor: '#ffbf00',
+    backgroundColor: '#E28135',
   },
 
   text: {

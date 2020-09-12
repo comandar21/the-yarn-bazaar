@@ -37,9 +37,9 @@ const MyQuotes = ({navigation}) => {
 
   return (
     <View style={style.container}>
-      <View style={style.rowbutton}>
-        <View>
-          <ScrollView horizontal={true} style={style.scrollView}>
+      <Content style={{margin: 5}}>
+        <View style={style.rowbutton}>
+          <ScrollView horizontal={true}>
             <Button style={style.button}>
               <Text style={style.text}>All</Text>
             </Button>
@@ -57,31 +57,31 @@ const MyQuotes = ({navigation}) => {
             </Button>
           </ScrollView>
         </View>
-      </View>
-      <View>
-        <TouchableOpacity
-          style={{
-            margin: 10,
-            width: null,
-            height: 40,
-            borderRadius: 5,
-            justifyContent: 'center',
-            alignItems: 'flex-end',
-          }}>
-          <View style={{flexDirection: 'row'}}>
-            <FeatherIcon
-              name="sliders"
-              size={16}
-              style={{marginRight: 5, color: 'grey'}}
-            />
-            <Text style={style.cardtext}>Sort/Filter</Text>
-          </View>
-        </TouchableOpacity>
-      </View>
-      <Content style={{margin: 10}}>
-        <MyQuotesCards />
-        <MyQuotesCards />
-        <MyQuotesCards />
+        <View>
+          <TouchableOpacity
+            style={{
+              margin: 10,
+              width: null,
+              height: 40,
+              borderRadius: 5,
+              justifyContent: 'center',
+              alignItems: 'flex-end',
+            }}>
+            <View style={{flexDirection: 'row'}}>
+              <FeatherIcon
+                name="sliders"
+                size={16}
+                style={{marginRight: 5, color: 'grey'}}
+              />
+              <Text style={style.cardtext}>Sort/Filter</Text>
+            </View>
+          </TouchableOpacity>
+        </View>
+        <View>
+          <MyQuotesCards />
+          <MyQuotesCards />
+          <MyQuotesCards />
+        </View>
       </Content>
     </View>
   );
@@ -96,9 +96,8 @@ const style = StyleSheet.create({
   },
 
   button: {
-    marginTop: 5,
+    margin: 5,
     borderRadius: 5,
-    marginLeft: 5,
     backgroundColor: 'white',
     height: 30,
     width: 80,

@@ -30,23 +30,23 @@ const MyOrdersCard = ({navigation}) => {
     currentStepIndicatorSize: 30,
     separatorStrokeWidth: 3,
     currentStepStrokeWidth: 3,
-    stepStrokeCurrentColor: '#ffbf00',
+    stepStrokeCurrentColor: '#E28135',
     stepStrokeWidth: 3,
-    stepStrokeFinishedColor: '#ffbf00',
+    stepStrokeFinishedColor: '#E28135',
     stepStrokeUnFinishedColor: '#aaaaaa',
-    separatorFinishedColor: '#ffbf00',
+    separatorFinishedColor: '#E28135',
     separatorUnFinishedColor: '#aaaaaa',
-    stepIndicatorFinishedColor: '#ffbf00',
+    stepIndicatorFinishedColor: '#E28135',
     stepIndicatorUnFinishedColor: '#ffffff',
     stepIndicatorCurrentColor: '#ffffff',
     stepIndicatorLabelFontSize: 13,
     currentStepIndicatorLabelFontSize: 13,
-    stepIndicatorLabelCurrentColor: '#ffbf00',
+    stepIndicatorLabelCurrentColor: '#E28135',
     stepIndicatorLabelFinishedColor: '#ffffff',
     stepIndicatorLabelUnFinishedColor: '#aaaaaa',
     labelColor: '#999999',
     labelSize: 13,
-    currentStepLabelColor: '#ffbf00',
+    currentStepLabelColor: '#E28135',
   };
 
   const pressHandler = () => {
@@ -56,7 +56,7 @@ const MyOrdersCard = ({navigation}) => {
   return (
     <Card>
       <View>
-        <Text style={{color: '#ffbf00', margin: 5}}>Planned</Text>
+        <Text style={{color: '#E28135', margin: 5}}>Planned</Text>
       </View>
       <View style={{flexDirection: 'row'}}>
         <View style={{flex: 1, margin: 5}}>
@@ -74,7 +74,7 @@ const MyOrdersCard = ({navigation}) => {
         </View>
         <View style={{flex: 3, margin: 5}}>
           <Text style={{marginTop: 5}}>SINTEX MILLS</Text>
-          <Text style={{color: '#ffbf00'}}>61sCotton,Combed</Text>
+          <Text style={{color: '#E28135'}}>61sCotton,Combed</Text>
         </View>
       </View>
       <View style={{marginLeft: 10}}>
@@ -97,7 +97,7 @@ const MyOrdersCard = ({navigation}) => {
         <View style={{flex: 1}}>
           <TouchableOpacity
             style={{
-              backgroundColor: '#ffbf00',
+              backgroundColor: '#E28135',
               margin: 10,
               width: null,
               height: 40,
@@ -118,10 +118,10 @@ const MyOrdersCard = ({navigation}) => {
               borderRadius: 5,
               justifyContent: 'center',
               alignItems: 'center',
-              borderColor: '#ffbf00',
+              borderColor: '#E28135',
               borderWidth: 1,
             }}>
-            <Text style={{color: '#ffbf00'}}>More Info</Text>
+            <Text style={{color: '#E28135'}}>More Info</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -153,7 +153,7 @@ const style = StyleSheet.create({
     marginTop: 5,
     borderRadius: 5,
     marginLeft: 5,
-    backgroundColor: '#ffbf00',
+    backgroundColor: '#E28135',
   },
 
   text: {

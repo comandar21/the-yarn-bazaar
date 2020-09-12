@@ -9,6 +9,7 @@ import {
   Button,
   Body,
   Title,
+  Item,
 } from 'native-base';
 import {
   SafeAreaView,
@@ -36,16 +37,15 @@ const QDTabs = ({navigation}) => {
   return (
     <Container style={style.container}>
       <Header style={style.header}>
-        <Left>
-          <Button transparent>
-            <FeatherIcon name="arrow-left" size={25} />
-          </Button>
-        </Left>
-        <Body>
+        <Item style={{alignItems: 'center'}}>
           <Title style={style.title}>Quotes & Dispatches </Title>
-        </Body>
+        </Item>
       </Header>
-      <Tabs tabBarActiveTextColor="black" tabBarInactiveTextColor="grey">
+      <Tabs
+        tabBarActiveTextColor="black"
+        tabBarInactiveTextColor="grey"
+        locked
+        tabBarUnderlineStyle={{backgroundColor: '#EBF4FA'}}>
         <Tab
           heading="My Quotes"
           tabStyle={{backgroundColor: 'white'}}

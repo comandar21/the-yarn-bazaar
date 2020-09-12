@@ -35,69 +35,61 @@ const MyOrders = ({navigation}) => {
   const pressHandler = () => {
     navigation.navigate('Splashscreen');
   };
-
   return (
     <View style={style.container}>
-      <View style={(style.rowbutton, {margin: 5})}>
-        <ScrollView horizontal={true}>
-          <Button style={style.button}>
-            <Text style={style.text}>All</Text>
-          </Button>
-          <Button style={style.button}>
-            <Text style={style.text}>Planned</Text>
-          </Button>
-          <Button style={style.button}>
-            <Text style={style.text}>Dispatched</Text>
-          </Button>
-          <Button style={style.button}>
-            <Text style={style.text}>Received</Text>
-          </Button>
-          <Button style={style.button}>
-            <Text style={style.text}>Received</Text>
-          </Button>
-        </ScrollView>
-      </View>
-      <View style={{flexDirection: 'row'}}>
-        <View style={{flex: 1}}>
-          <TouchableOpacity
-            style={{
-              backgroundColor: '#ffbf00',
-              margin: 10,
-              width: null,
-              height: 40,
-              borderRadius: 5,
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}>
-            <Text style={{color: 'white'}}>Plan Dispatch</Text>
-          </TouchableOpacity>
+      <Content style={{margin: 5}}>
+        <View style={style.rowbutton}>
+          <ScrollView horizontal={true}>
+            <Button style={style.button}>
+              <Text style={style.text}>All</Text>
+            </Button>
+            <Button style={style.button}>
+              <Text style={style.text}>Planned</Text>
+            </Button>
+            <Button style={style.button}>
+              <Text style={style.text}>Dispatched</Text>
+            </Button>
+            <Button style={style.button}>
+              <Text style={style.text}>Received</Text>
+            </Button>
+            <Button style={style.button}>
+              <Text style={style.text}>Received</Text>
+            </Button>
+          </ScrollView>
+        </View>
+        <View style={{flexDirection: 'row'}}>
+          <View style={{flex: 1}}>
+            <TouchableOpacity
+              style={{
+                backgroundColor: '#E28135',
+                margin: 5,
+                width: null,
+                height: 40,
+                borderRadius: 5,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
+              <Text style={{color: 'white'}}>Plan Dispatch</Text>
+            </TouchableOpacity>
+          </View>
+          <View>
+            <TouchableOpacity style={style.btn}>
+              <View style={{flexDirection: 'row'}}>
+                <FeatherIcon
+                  name="sliders"
+                  size={16}
+                  style={{marginRight: 5, color: 'grey'}}
+                />
+                <Text style={style.cardtext}>Sort/Filter</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
         </View>
         <View>
-          <TouchableOpacity
-            style={{
-              margin: 10,
-              width: null,
-              height: 40,
-              borderRadius: 5,
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}>
-            <View style={{flexDirection: 'row'}}>
-              <FeatherIcon
-                name="sliders"
-                size={16}
-                style={{marginRight: 5, color: 'grey'}}
-              />
-              <Text style={style.cardtext}>Sort/Filter</Text>
-            </View>
-          </TouchableOpacity>
+          <MyOrdersCard />
+          <MyOrdersCard />
+          <MyOrdersCard />
         </View>
-      </View>
-      <Content style={{margin: 10}}>
-        <MyOrdersCard />
-        <MyOrdersCard />
-
-        <MyOrdersCard />
       </Content>
     </View>
   );
@@ -112,9 +104,8 @@ const style = StyleSheet.create({
   },
 
   button: {
-    marginTop: 5,
+    margin: 5,
     borderRadius: 5,
-    marginLeft: 5,
     backgroundColor: 'white',
     height: 30,
     width: 80,
@@ -123,11 +114,13 @@ const style = StyleSheet.create({
     justifyContent: 'center',
   },
 
-  mainbutton: {
-    marginTop: 5,
+  btn: {
+    margin: 5,
+    width: null,
+    height: 40,
     borderRadius: 5,
-    marginLeft: 5,
-    backgroundColor: '#ffbf00',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 
   text: {
@@ -143,5 +136,8 @@ const style = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  scrollView: {
+    margin: 5,
   },
 });

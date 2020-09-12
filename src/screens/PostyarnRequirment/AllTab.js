@@ -75,10 +75,7 @@ const AllTab = () => {
           <FontAwesomeIcon name="heart" size={25} />
         </Item>
       </Header>
-      <Tabs
-        tabBarActiveTextColor="orange"
-        tabBarInactiveTextColor="#666362"
-        renderTabBar={() => <ScrollableTab />}>
+      <Tabs tabBarActiveTextColor="orange" tabBarInactiveTextColor="#666362">
         <Tab
           heading="All Yarns"
           tabStyle={{backgroundColor: 'white'}}
@@ -87,8 +84,8 @@ const AllTab = () => {
         </Tab>
         <Tab
           heading="Cotton"
-          tabStyle={{backgroundColor: 'orange'}}
-          activeTabStyle={{backgroundColor: 'orange'}}>
+          tabStyle={{backgroundColor: 'white'}}
+          activeTabStyle={{backgroundColor: 'white'}}>
           <Cotton />
         </Tab>
         <Tab

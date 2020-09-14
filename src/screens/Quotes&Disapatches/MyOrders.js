@@ -125,7 +125,7 @@ const style = StyleSheet.create({
 
   text: {
     color: 'black',
-    fontSize: 8,
+    fontSize: 9,
   },
 
   cardtext: {

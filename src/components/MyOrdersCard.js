@@ -37,16 +37,16 @@ const MyOrdersCard = ({navigation}) => {
   return (
     <Card>
       <View>
-        <Text style={{color: '#F99F23', margin: 5}}>Planned</Text>
+        <Text style={style.top_cardtext}>Planned</Text>
       </View>
       <View style={{flexDirection: 'row'}}>
-        <View style={{flex: 1, margin: 4}}>
-          <Card style={{borderRadius: 5}}>
+        <View style={{margin: 4}}>
+          <Card style={{borderRadius: 5, width: 52, height: 66}}>
             <TouchableOpacity>
               <View
                 style={{
                   backgroundColor: '#2B3856',
-                  height: 70,
+                  height: 50,
                   width: null,
                   justifyContent: 'center',
                   alignItems: 'center',
@@ -55,33 +55,48 @@ const MyOrdersCard = ({navigation}) => {
                 }}>
                 <Text style={{color: 'white'}}>61s</Text>
               </View>
-              <View style={{justifyContent: 'center', alignItems: 'center'}}>
-                <Text>Cotton</Text>
+              <View
+                style={{
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                <Text style={{fontFamily: 'AvenirLTStd-Roman', fontSize: 10}}>
+                  Cotton
+                </Text>
               </View>
             </TouchableOpacity>
           </Card>
         </View>
         <View style={{flex: 3, margin: 5}}>
           <View>
-            <Text>Corded,Ring,Frame,Combed</Text>
-            <Text style={{marginTop: 5}}>SINTEX MILLS</Text>
+            <Text style={{fontFamily: 'AvenirLTStd-Roman', fontSize: 13}}>
+              Corded,Ring,Frame,Combed
+            </Text>
+            <Text
+              style={{
+                marginTop: 5,
+                fontFamily: 'AvenirLTStd-Roman',
+                fontSize: 12,
+              }}>
+              SINTEX MILLS
+            </Text>
           </View>
-          <View style={{flexDirection: 'row', margin: 10}}>
-            <View style={{flex: 1}}>
+          <View style={{flexDirection: 'row', marginTop: 5}}>
+            <View>
               <View style={{flexDirection: 'row'}}>
                 <Icon name="folder" style={{marginRight: 5}}></Icon>
                 <Text style={style.cardtext}>Quantity</Text>
               </View>
               <Text style={style.cardtext}>18 Tons</Text>
             </View>
-            <View style={{flex: 1}}>
+            <View style={{marginLeft: 15}}>
               <View style={{flexDirection: 'row'}}>
                 <Icon name="folder" style={{marginRight: 5}}></Icon>
                 <Text style={style.cardtext}>Price</Text>
               </View>
               <Text style={style.cardtext}>200/kg</Text>
             </View>
-            <View style={{flex: 1}}>
+            <View style={{marginLeft: 15}}>
               <View style={{flexDirection: 'row'}}>
                 <Icon name="calendar" style={{marginRight: 5}}></Icon>
                 <Text style={style.cardtext}>Placed on</Text>
@@ -157,11 +172,19 @@ const style = StyleSheet.create({
   text: {
     color: 'black',
     fontSize: 8,
+    fontFamily: 'AvenirLTStd-Roman',
+  },
+
+  top_cardtext: {
+    fontSize: 9,
+    fontFamily: 'AvenirLTStd-Roman',
+    color: '#F99F23',
+    margin: 5,
   },
 
   cardtext: {
-    color: 'black',
-    fontSize: 12,
+    fontSize: 9,
+    fontFamily: 'AvenirLTStd-Roman',
   },
   rowbutton: {
     flexDirection: 'row',

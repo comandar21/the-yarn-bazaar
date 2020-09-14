@@ -93,11 +93,13 @@ const style = StyleSheet.create({
   text: {
     color: 'black',
     fontSize: 8,
+    fontFamily: 'AvenirLTStd-Roman',
   },
 
   cardtext: {
     color: 'black',
     fontSize: 12,
+    fontFamily: 'AvenirLTStd-Roman',
   },
   rowbutton: {
     flexDirection: 'row',

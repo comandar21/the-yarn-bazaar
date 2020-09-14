@@ -16,6 +16,7 @@ import {
   Button,
   Text,
   View,
+  Label,
 } from 'native-base';
 
 import {
@@ -31,15 +32,16 @@ import {
 
 import FeatherIcon from 'react-native-vector-icons/Feather';
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
-import LinearGradient from 'react-native-linear-gradient';
+import DrawerComponent from '../../components/DrawerComponent';
 
 import AllYarns from './AllYarns';
 import Cotton from './Cotton';
 import Texturize from './Texturize';
 import PFS from './PFS';
 import Tab5 from './Tab5';
+import Icon from 'react-native-vector-icons/Feather';
 
-const PostYarnRequirement = () => {
+const PostYarnRequirement = ({navigation}) => {
   const [data, setData] = React.useState({
     phoneno: '',
     password: '',
@@ -81,30 +83,6 @@ const PostYarnRequirement = () => {
 
   return (
     <Container style={style.container}>
-      <Header style={style.header}>
-        <Left>
-          <TouchableOpacity>
-            <FeatherIcon name="menu" style={style.title} size={25} />
-          </TouchableOpacity>
-        </Left>
-        <Body>
-          <Title style={style.title}>The Yarn Bazaar</Title>
-        </Body>
-
-        <Right>
-          <TouchableOpacity>
-            <FontAwesomeIcon
-              name="user"
-              style={style.title}
-              size={25}
-              onPress={() => {
-                setModalVisible(true);
-              }}
-            />
-          </TouchableOpacity>
-        </Right>
-      </Header>
-
       <Header
         searchBar
         rounded
@@ -122,6 +100,7 @@ const PostYarnRequirement = () => {
           <FontAwesomeIcon name="heart" size={25} />
         </Item>
       </Header>
+
       <Tabs
         tabBarUnderlineStyle={{backgroundColor: '#E28135'}}
         renderTabBar={() => <ScrollableTab />}>
@@ -156,61 +135,6 @@ const PostYarnRequirement = () => {
           <Tab5 />
         </Tab>
       </Tabs>
-      <Modal animationType="slide" transparent={true} visible={modalVisible}>
-        <View style={style.centeredView}>
-          <View style={style.modalView}>
-            <Text style={style.text_footer}>Phone No</Text>
-            <View style={style.action}>
-              <FontAwesomeIcon name="phone" color="#05375a" size={20} />
-              <TextInput
-                placeholder="Phone No"
-                keyboardType="phone-pad"
-                style={style.textInput}
-                autoCapitalize="none"
-                onChangeText={(val) => textInputChange(val)}
-              />
-              {data.check_textInputChange ? (
-                <FeatherIcon name="check-circle" color="#F99F23" size={20} />
-              ) : null}
-            </View>
-            <Text style={[style.text_footer, {marginTop: 35}]}>Password</Text>
-            <View style={style.action}>
-              <FontAwesomeIcon name="lock" color="#05375a" size={20} />
-              <TextInput
-                placeholder="Password"
-                secureTextEntry={data.secureTextEntry ? true : false}
-                style={style.textInput}
-                autoCapitalize="none"
-                onChangeText={(val) => hanndlePasswordChange(val)}
-              />
-              <TouchableOpacity onPress={updateSeureTextEntry}>
-                {data.secureTextEntry ? (
-                  <FeatherIcon name="eye-off" color="grey" size={20} />
-                ) : (
-                  <Feather name="eye-off" color="grey" size={20} />
-                )}
-              </TouchableOpacity>
-            </View>
-            <View style={style.button}>
-              <TouchableOpacity
-                style={style.signIn}
-                onPress={() => {
-                  setModalVisible(!modalVisible);
-                }}>
-                <Text style={[style.textSign, {color: 'white'}]}>Sign In</Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity
-                style={style.signUp}
-                onPress={() => {
-                  setModalVisible(!modalVisible);
-                }}>
-                <Text style={style.textSign}>Sign Up</Text>
-              </TouchableOpacity>
-            </View>
-          </View>
-        </View>
-      </Modal>
     </Container>
   );
 };
@@ -234,7 +158,6 @@ const style = StyleSheet.create({
   centeredView: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
     marginTop: 22,
   },
   modalView: {
@@ -242,7 +165,6 @@ const style = StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 10,
     padding: 20,
-    alignItems: 'center',
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -311,6 +233,6 @@ const style = StyleSheet.create({
   },
   button: {
     alignItems: 'center',
-    marginTop: 50,
+    marginTop: 30,
   },
 });

@@ -40,21 +40,6 @@ const Explore = ({navigation}) => {
 
   return (
     <View style={style.container}>
-      <Header style={style.header}>
-        <Left>
-          <TouchableOpacity>
-            <FeatherIcon name="menu" style={style.title} size={25} />
-          </TouchableOpacity>
-        </Left>
-        <Body>
-          <Title style={style.title}>The Yarn Bazaar</Title>
-        </Body>
-        <Right>
-          <TouchableOpacity>
-            <FontAwesomeIcon name="bell" style={style.title} size={25} />
-          </TouchableOpacity>
-        </Right>
-      </Header>
       <Header
         searchBar
         rounded

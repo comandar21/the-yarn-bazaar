@@ -39,13 +39,13 @@ const MyOrdersCard = ({navigation}) => {
     stepIndicatorFinishedColor: '#F99F23',
     stepIndicatorUnFinishedColor: '#ffffff',
     stepIndicatorCurrentColor: '#ffffff',
-    stepIndicatorLabelFontSize: 13,
+    stepIndicatorLabelFontSize: 12,
     currentStepIndicatorLabelFontSize: 13,
     stepIndicatorLabelCurrentColor: '#F99F23',
     stepIndicatorLabelFinishedColor: '#ffffff',
     stepIndicatorLabelUnFinishedColor: '#aaaaaa',
     labelColor: '#999999',
-    labelSize: 13,
+    labelSize: 12,
     currentStepLabelColor: '#F99F23',
   };
 
@@ -56,7 +56,15 @@ const MyOrdersCard = ({navigation}) => {
   return (
     <Card>
       <View>
-        <Text style={{color: '#F99F23', margin: 5}}>Planned</Text>
+        <Text
+          style={{
+            color: '#F99F23',
+            margin: 5,
+            fontFamily: 'AvenirLTStd-Roman',
+            fontSize: 10,
+          }}>
+          Planned
+        </Text>
       </View>
       <View style={{flexDirection: 'row'}}>
         <View style={{flex: 1, margin: 4}}>
@@ -73,12 +81,21 @@ const MyOrdersCard = ({navigation}) => {
           </Card>
         </View>
         <View style={{flex: 3, margin: 5}}>
-          <Text style={{marginTop: 5}}>SINTEX MILLS</Text>
+          <Text
+            style={{
+              marginTop: 5,
+              fontFamily: 'AvenirLTStd-Roman',
+              fontSize: 17,
+            }}>
+            SINTEX MILLS
+          </Text>
           <Text style={{color: '#F99F23'}}>61sCotton,Combed</Text>
         </View>
       </View>
       <View style={{marginLeft: 5}}>
-        <Text>Quantity - 9 Tons</Text>
+        <Text style={{fontFamily: 'AvenirLTStd-Roman', fontSize: 15}}>
+          Quantity - 9 Tons
+        </Text>
       </View>
       <View style={{marginTop: 10}}>
         <StepIndicator
@@ -105,7 +122,9 @@ const MyOrdersCard = ({navigation}) => {
               justifyContent: 'center',
               alignItems: 'center',
             }}>
-            <Text style={{color: 'white'}}>Messages</Text>
+            <Text style={{color: 'white', fontFamily: 'AvenirLTStd-Roman'}}>
+              Messages
+            </Text>
           </TouchableOpacity>
         </View>
         <View style={{flex: 1}}>
@@ -121,7 +140,9 @@ const MyOrdersCard = ({navigation}) => {
               borderColor: '#F99F23',
               borderWidth: 1,
             }}>
-            <Text style={{color: '#F99F23'}}>More Info</Text>
+            <Text style={{color: '#F99F23', fontFamily: 'AvenirLTStd-Roman'}}>
+              More Info
+            </Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -159,11 +180,13 @@ const style = StyleSheet.create({
   text: {
     color: 'black',
     fontSize: 8,
+    fontFamily: 'AvenirLTStd-Roman',
   },
 
   cardtext: {
     color: 'black',
     fontSize: 12,
+    fontFamily: 'AvenirLTStd-Roman',
   },
   rowbutton: {
     flexDirection: 'row',

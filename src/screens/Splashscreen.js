@@ -7,7 +7,7 @@ import * as Animatable from 'react-native-animatable';
 
 const Splashscreen = ({navigation}) => {
   const pressHandler = () => {
-    navigation.navigate('Login');
+    navigation.navigate('Home');
   };
   return (
     <View style={style.container}>

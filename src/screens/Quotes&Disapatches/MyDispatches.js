@@ -47,8 +47,8 @@ const MyDispatches = ({navigation}) => {
         <View>
           <TouchableOpacity
             style={{
-              backgroundColor: '#E28135',
-              margin: 10,
+              backgroundColor: '#F99F23',
+              margin: 5,
               width: null,
               height: 40,
               borderRadius: 5,
@@ -87,7 +87,7 @@ const style = StyleSheet.create({
     marginTop: 5,
     borderRadius: 5,
     marginLeft: 5,
-    backgroundColor: '#E28135',
+    backgroundColor: '#F99F23',
   },
 
   text: {

@@ -14,6 +14,7 @@ import {
   Text,
   View,
   Icon,
+  Card,
 } from 'native-base';
 import {
   SafeAreaView,
@@ -24,12 +25,13 @@ import {
   TextInput,
   ScrollView,
 } from 'react-native';
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import Feather from 'react-native-vector-icons/Feather';
+import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
+import FeatherIcon from 'react-native-vector-icons/Feather';
 import LinearGradient from 'react-native-linear-gradient';
 import * as Animatable from 'react-native-animatable';
 import {color} from 'react-native-reanimated';
-import PostYarnCard from '../../components/PostYarnCard';
+
+import ExploreCard from '../components/ExploreCard';
 
 const Explore = ({navigation}) => {
   const pressHandler = () => {
@@ -38,18 +40,72 @@ const Explore = ({navigation}) => {
 
   return (
     <View style={style.container}>
-      
-      <View style={{margin: 5}}>
+      <Header style={style.header}>
+        <Left>
+          <TouchableOpacity>
+            <FeatherIcon name="menu" style={style.title} size={25} />
+          </TouchableOpacity>
+        </Left>
+        <Body>
+          <Title style={style.title}>The Yarn Bazaar</Title>
+        </Body>
         <Right>
-          <Text>Sort/Filter</Text>
+          <TouchableOpacity>
+            <FontAwesomeIcon name="bell" style={style.title} size={25} />
+          </TouchableOpacity>
         </Right>
+      </Header>
+      <Header
+        searchBar
+        rounded
+        style={{backgroundColor: 'white', flexDirection: 'row'}}>
+        <Item
+          style={{
+            borderRadius: 50,
+            backgroundColor: '#d3d3d3',
+            flex: 8,
+          }}>
+          <FeatherIcon name="search" size={25} style={{margin: 5}} />
+          <Input placeholder="Search" />
+        </Item>
+        <Item style={{justifyContent: 'center'}}>
+          <FontAwesomeIcon name="heart" size={25} />
+        </Item>
+      </Header>
+      <View>
+        <View style={{margin: 10}}>
+          <Text>Recents</Text>
+        </View>
+        <View>
+          <ScrollView horizontal={true}>
+            <ExploreCard />
+            <ExploreCard />
+            <ExploreCard />
+            <ExploreCard />
+            <ExploreCard />
+            <ExploreCard />
+            <ExploreCard />
+            <ExploreCard />
+          </ScrollView>
+        </View>
       </View>
-      <Content style={{margin: 10}}>
-        <PostYarnCard />
-        <PostYarnCard />
-        <PostYarnCard />
-        
-      </Content>
+      <View>
+        <View style={{margin: 10}}>
+          <Text>Explore</Text>
+        </View>
+        <View>
+          <ScrollView horizontal={true}>
+            <ExploreCard />
+            <ExploreCard />
+            <ExploreCard />
+            <ExploreCard />
+            <ExploreCard />
+            <ExploreCard />
+            <ExploreCard />
+            <ExploreCard />
+          </ScrollView>
+        </View>
+      </View>
     </View>
   );
 };
@@ -62,33 +118,10 @@ const style = StyleSheet.create({
     backgroundColor: '#EBF4FA',
   },
 
-  button: {
-    marginTop: 5,
-    borderRadius: 5,
-    marginLeft: 5,
+  header: {
     backgroundColor: 'white',
-    height: 30,
-    width: 80,
-    borderRadius: 50,
-    alignItems: 'center',
-    justifyContent: 'center',
   },
-
-  mainbutton: {
-    marginTop: 5,
-    borderRadius: 5,
-    marginLeft: 5,
-    backgroundColor: 'orange',
-  },
-
-  text: {
+  title: {
     color: 'black',
-    fontSize: 8,
   },
-
-  cardtext: {
-    color: 'black',
-    fontSize: 12,
-  },
- 
 });

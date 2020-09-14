@@ -6,9 +6,6 @@ import LinearGradient from 'react-native-linear-gradient';
 import * as Animatable from 'react-native-animatable';
 
 const Notification = ({navigation}) => {
-  const pressHandler = () => {
-    navigation.navigate('Login');
-  };
   return (
     <View style={style.container}>
       <Text>Notification screen</Text>

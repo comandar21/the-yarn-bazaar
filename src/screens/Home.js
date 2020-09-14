@@ -28,37 +28,28 @@ import {
 import LinearGradient from 'react-native-linear-gradient';
 import * as Animatable from 'react-native-animatable';
 import {color} from 'react-native-reanimated';
-import {createDrawerNavigator} from '@react-navigation/drawer';
 import Notification from './Notification';
 import FeatherIcon from 'react-native-vector-icons/Feather';
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
-
-const Drawer = createDrawerNavigator();
+import Drawer from '../components/Drawer';
 
 const Home = ({navigation}) => {
-  const pressHandler = () => {
-    navigation.navigate('Splashscreen');
-  };
-
-  const drawer = () => {
-    return (
-      <Drawer.Navigator
-        initialRouteName="Home"
-        screenOptions={{
-          headerShown: false,
-        }}>
-        <Drawer.Screen name="Notification" component={Notification} />
-      </Drawer.Navigator>
-    );
+  const openDrawer = () => {
+    return <Drawer />;
   };
 
   return (
     <Container>
       <Header style={style.header}>
         <Left>
-          <Button transparent>
-            <FeatherIcon name="menu" style={style.title} onPress={drawer} />
-          </Button>
+          <TouchableOpacity>
+            <FeatherIcon
+              name="menu"
+              size={25}
+              style={style.title}
+              onPress={openDrawer}
+            />
+          </TouchableOpacity>
         </Left>
         <Body>
           <Title style={style.title}>Home </Title>

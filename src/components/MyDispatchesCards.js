@@ -30,23 +30,23 @@ const MyOrdersCard = ({navigation}) => {
     currentStepIndicatorSize: 30,
     separatorStrokeWidth: 3,
     currentStepStrokeWidth: 3,
-    stepStrokeCurrentColor: '#E28135',
+    stepStrokeCurrentColor: '#F99F23',
     stepStrokeWidth: 3,
-    stepStrokeFinishedColor: '#E28135',
+    stepStrokeFinishedColor: '#F99F23',
     stepStrokeUnFinishedColor: '#aaaaaa',
-    separatorFinishedColor: '#E28135',
+    separatorFinishedColor: '#F99F23',
     separatorUnFinishedColor: '#aaaaaa',
-    stepIndicatorFinishedColor: '#E28135',
+    stepIndicatorFinishedColor: '#F99F23',
     stepIndicatorUnFinishedColor: '#ffffff',
     stepIndicatorCurrentColor: '#ffffff',
     stepIndicatorLabelFontSize: 13,
     currentStepIndicatorLabelFontSize: 13,
-    stepIndicatorLabelCurrentColor: '#E28135',
+    stepIndicatorLabelCurrentColor: '#F99F23',
     stepIndicatorLabelFinishedColor: '#ffffff',
     stepIndicatorLabelUnFinishedColor: '#aaaaaa',
     labelColor: '#999999',
     labelSize: 13,
-    currentStepLabelColor: '#E28135',
+    currentStepLabelColor: '#F99F23',
   };
 
   const pressHandler = () => {
@@ -56,10 +56,10 @@ const MyOrdersCard = ({navigation}) => {
   return (
     <Card>
       <View>
-        <Text style={{color: '#E28135', margin: 5}}>Planned</Text>
+        <Text style={{color: '#F99F23', margin: 5}}>Planned</Text>
       </View>
       <View style={{flexDirection: 'row'}}>
-        <View style={{flex: 1, margin: 5}}>
+        <View style={{flex: 1, margin: 4}}>
           <Card style={{borderRadius: 5}}>
             <TouchableOpacity>
               <Image
@@ -74,10 +74,10 @@ const MyOrdersCard = ({navigation}) => {
         </View>
         <View style={{flex: 3, margin: 5}}>
           <Text style={{marginTop: 5}}>SINTEX MILLS</Text>
-          <Text style={{color: '#E28135'}}>61sCotton,Combed</Text>
+          <Text style={{color: '#F99F23'}}>61sCotton,Combed</Text>
         </View>
       </View>
-      <View style={{marginLeft: 10}}>
+      <View style={{marginLeft: 5}}>
         <Text>Quantity - 9 Tons</Text>
       </View>
       <View style={{marginTop: 10}}>
@@ -88,7 +88,7 @@ const MyOrdersCard = ({navigation}) => {
           currentPosition={2}
         />
       </View>
-      <View style={{marginLeft: 10}}>
+      <View style={{marginLeft: 5}}>
         <Text style={style.cardtext}>
           Estimated Date of Receving : 31/08/20
         </Text>
@@ -97,8 +97,8 @@ const MyOrdersCard = ({navigation}) => {
         <View style={{flex: 1}}>
           <TouchableOpacity
             style={{
-              backgroundColor: '#E28135',
-              margin: 10,
+              backgroundColor: '#F99F23',
+              margin: 5,
               width: null,
               height: 40,
               borderRadius: 5,
@@ -112,16 +112,16 @@ const MyOrdersCard = ({navigation}) => {
           <TouchableOpacity
             style={{
               backgroundColor: 'white',
-              margin: 10,
+              margin: 5,
               width: null,
               height: 40,
               borderRadius: 5,
               justifyContent: 'center',
               alignItems: 'center',
-              borderColor: '#E28135',
+              borderColor: '#F99F23',
               borderWidth: 1,
             }}>
-            <Text style={{color: '#E28135'}}>More Info</Text>
+            <Text style={{color: '#F99F23'}}>More Info</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -153,7 +153,7 @@ const style = StyleSheet.create({
     marginTop: 5,
     borderRadius: 5,
     marginLeft: 5,
-    backgroundColor: '#E28135',
+    backgroundColor: '#F99F23',
   },
 
   text: {

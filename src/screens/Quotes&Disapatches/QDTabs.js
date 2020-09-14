@@ -45,7 +45,7 @@ const QDTabs = ({navigation}) => {
         tabBarActiveTextColor="black"
         tabBarInactiveTextColor="grey"
         locked
-        tabBarUnderlineStyle={{backgroundColor: '#EBF4FA'}}>
+        tabBarUnderlineStyle={{backgroundColor: '#F99F23'}}>
         <Tab
           heading="My Quotes"
           tabStyle={{backgroundColor: 'white'}}

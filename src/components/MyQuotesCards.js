@@ -38,16 +38,24 @@ const MyOrdersCard = ({navigation}) => {
   return (
     <Card>
       <View>
-        <Text style={{color: '#F99F23', margin: 5}}>Active</Text>
+        <Text
+          style={{
+            color: '#F99F23',
+            margin: 5,
+            fontFamily: 'AvenirLTStd-Roman',
+            fontSize: 9,
+          }}>
+          Active
+        </Text>
       </View>
       <View style={{flexDirection: 'row'}}>
-        <View style={{flex: 1, margin: 3}}>
-          <Card style={{borderRadius: 5}}>
+        <View style={{margin: 3}}>
+          <Card style={{borderRadius: 5, width: 52, height: 66}}>
             <TouchableOpacity>
               <View
                 style={{
                   backgroundColor: '#2B3856',
-                  height: 70,
+                  height: 50,
                   width: null,
                   justifyContent: 'center',
                   alignItems: 'center',
@@ -57,25 +65,28 @@ const MyOrdersCard = ({navigation}) => {
                 <Text style={{color: 'white'}}>61s</Text>
               </View>
               <View style={{justifyContent: 'center', alignItems: 'center'}}>
-                <Text>Cotton</Text>
+                <Text style={{fontFamily: 'AvenirLTStd-Roman', fontSize: 10}}>
+                  Cotton
+                </Text>
               </View>
             </TouchableOpacity>
           </Card>
         </View>
-        <View style={{flex: 3, margin: 5}}>
+        <View style={{margin: 5}}>
           <View>
-            <Text>Corded, Ring, Frame, Weaving, Compact, Combed</Text>
+            <Text style={{fontFamily: 'AvenirLTStd-Roman', fontSize: 13}}>
+              Corded, Ring, Frame, Weaving, Compact, Combed
+            </Text>
           </View>
-          <View style={{flexDirection: 'row', margin: 10}}>
-            <View style={{flex: 1}}>
+          <View style={{flexDirection: 'row', marginTop: 5}}>
+            <View>
               <View style={{flexDirection: 'row'}}>
                 <Icon name="folder" style={{marginRight: 5}}></Icon>
-
                 <Text style={style.cardtext}>Quantity</Text>
               </View>
               <Text style={style.cardtext}>18 Tons</Text>
             </View>
-            <View style={{flex: 1}}>
+            <View style={{marginLeft: 15}}>
               <View style={{flexDirection: 'row'}}>
                 <Icon name="calendar" style={{marginRight: 5}}></Icon>
 
@@ -138,7 +149,7 @@ const style = StyleSheet.create({
 
   cardtext: {
     color: 'black',
-    fontSize: 12,
+    fontSize: 9,
   },
   rowbutton: {
     flexDirection: 'row',

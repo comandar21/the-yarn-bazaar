@@ -7,10 +7,12 @@ import Icon from 'react-native-vector-icons/Feather';
 import {StyleSheet, TouchableOpacity, Modal} from 'react-native';
 
 import Splashscreen from './src/screens/Splashscreen';
-import QDTabs from './src/screens/Quotes&Disapatches/QDTabs';
-import PostYarnRequirement from './src/screens/PostyarnRequirment/PostYarnRequirement';
+import QDTabs from './src/screens/QDTabs';
+import PostYarnRequirement from './src/screens/PostYarnRequirement';
 import Explore from './src/screens/Explore';
 import Notification from './src/screens/Notification';
+import AboutUs from './src/screens/AboutUs';
+
 import FeatherIcon from 'react-native-vector-icons/Feather';
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import {
@@ -49,6 +51,7 @@ const App = () => {
     });
 
     const [modalVisible, setModalVisible] = useState(false);
+    // const[drawerVisible,setDrawerVisible]=useState(false)
 
     const textInputChange = (val) => {
       if (val.length !== 0) {
@@ -79,11 +82,14 @@ const App = () => {
         secureTextEntry: !data.secureTextEntry,
       });
     };
+    const drawer = () => {
+      DrawerComponent();
+    };
     return (
       <Container>
         <Header style={style.header}>
           <Left>
-            <TouchableOpacity onPress={() => DrawerComponent}>
+            <TouchableOpacity onPress={() => drawer}>
               <FeatherIcon name="menu" style={style.title} size={25} />
             </TouchableOpacity>
           </Left>
@@ -104,26 +110,23 @@ const App = () => {
             </TouchableOpacity>
           </Right>
         </Header>
-
         <Modal animationType="fade" transparent visible={modalVisible}>
           <View style={style.centeredView}>
             <View style={style.modalView}>
-              <Item floatingLabel>
-                <Label>Username</Label>
-                <Icon name="user"></Icon>
+              <Item floatingLabel style={{margin: 5}}>
+                <Label>Email-Id/Phone-No</Label>
                 <Input onChangeText={(val) => textInputChange(val)} />
               </Item>
-              <Item floatingLabel>
+              <Item floatingLabel style={{margin: 5}}>
                 <Label>Password</Label>
-                <Input onChangeText={(val) => hanndlePasswordChange(val)} />
+                <Input
+                  secureTextEntry
+                  onChangeText={(val) => hanndlePasswordChange(val)}
+                />
               </Item>
-              <View
-                style={{
-                  marginTop: 15,
-                  alignItems: 'flex-end',
-                }}>
+              <View style={style.forgotpassword_view}>
                 <Text
-                  style={{color: 'orange'}}
+                  style={style.login_text}
                   onPress={() => {
                     alert('forgot password');
                   }}>
@@ -166,22 +169,15 @@ const App = () => {
                   onPress={() => {
                     setModalVisible(!modalVisible);
                   }}>
-                  <Text style={[style.textSign, {color: 'white'}]}>
-                    Sign In
-                  </Text>
+                  <Text style={style.textSign}>Sign In</Text>
                 </TouchableOpacity>
               </View>
-              <View
-                style={{
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  marginTop: 10,
-                }}>
+              <View style={style.noAccount}>
                 <Text>Don't have an Account?</Text>
                 <Text>
                   Click{' '}
                   <Text
-                    style={{color: 'orange'}}
+                    style={style.login_text}
                     onPress={() => {
                       alert('forgot password');
                     }}>
@@ -242,7 +238,7 @@ const App = () => {
           headerShown: false,
         }}>
         <Drawer.Screen name="Home" component={HomeTabs} />
-        <Drawer.Screen name="Notification" component={Notification} />
+        <Drawer.Screen name="AboutUs" component={AboutUs} />
       </Drawer.Navigator>
     );
   };
@@ -265,6 +261,7 @@ export default App;
 const style = StyleSheet.create({
   header: {
     backgroundColor: 'white',
+    alignItems: 'center',
   },
   title: {
     color: 'black',
@@ -279,7 +276,7 @@ const style = StyleSheet.create({
       width: 0,
       height: 2,
     },
-    shadowOpacity: 0.25,
+    shadowOpacity: 0.5,
     shadowRadius: 3.84,
     elevation: 3,
   },
@@ -303,5 +300,19 @@ const style = StyleSheet.create({
   textSign: {
     fontSize: 18,
     fontWeight: 'bold',
+    color: 'white',
+  },
+  forgotpassword_view: {
+    marginTop: 15,
+    alignItems: 'flex-end',
+  },
+  login_text: {
+    fontFamily: 'AvenirLTStd-Roman',
+    color: '#F99F23',
+  },
+  noAccount: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 10,
   },
 });

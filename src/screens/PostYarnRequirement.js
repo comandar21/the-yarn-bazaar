@@ -32,13 +32,13 @@ import {
 
 import FeatherIcon from 'react-native-vector-icons/Feather';
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
-import DrawerComponent from '../../components/DrawerComponent';
+import DrawerComponent from '../components/DrawerComponent';
 
-import AllYarns from './AllYarns';
-import Cotton from './Cotton';
-import Texturize from './Texturize';
-import PFS from './PFS';
-import Tab5 from './Tab5';
+import AllYarns from './PostyarnRequirment/AllYarns';
+import Cotton from './PostyarnRequirment/Cotton';
+import Texturize from './PostyarnRequirment/Texturize';
+import PFS from './PostyarnRequirment/PFS';
+import Tab5 from './PostyarnRequirment/Tab5';
 import Icon from 'react-native-vector-icons/Feather';
 
 const PostYarnRequirement = ({navigation}) => {

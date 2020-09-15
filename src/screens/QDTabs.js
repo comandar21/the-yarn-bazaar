@@ -25,9 +25,9 @@ import LinearGradient from 'react-native-linear-gradient';
 import * as Animatable from 'react-native-animatable';
 import {color} from 'react-native-reanimated';
 
-import MyOrders from './MyOrders';
-import MyDispatches from './MyDispatches';
-import MyQuotes from './MyQuotes';
+import MyOrders from './Quotes&Disapatches/MyOrders';
+import MyDispatches from './Quotes&Disapatches/MyDispatches';
+import MyQuotes from './Quotes&Disapatches/MyQuotes';
 
 const QDTabs = ({navigation}) => {
   const pressHandler = () => {

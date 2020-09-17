@@ -63,38 +63,46 @@ const PostYarnRequirement = ({navigation}) => {
       </Header>
 
       <Tabs
-        tabBarActiveTextColor="black"
-        tabBarInactiveTextColor="grey"
         tabBarUnderlineStyle={{backgroundColor: '#F99F23'}}
         renderTabBar={() => <ScrollableTab />}>
         <Tab
           heading="All Yarns"
           tabStyle={{backgroundColor: 'white'}}
-          activeTabStyle={{backgroundColor: 'white'}}>
+          activeTabStyle={{backgroundColor: 'white'}}
+          activeTextStyle={{color: 'black'}}
+          textStyle={{color: 'grey'}}>
           <AllYarns />
         </Tab>
         <Tab
           heading="Cotton"
           tabStyle={{backgroundColor: 'white'}}
-          activeTabStyle={{backgroundColor: 'white'}}>
+          activeTabStyle={{backgroundColor: 'white'}}
+          activeTextStyle={{color: 'black'}}
+          textStyle={{color: 'grey'}}>
           <Cotton />
         </Tab>
         <Tab
           heading="Texturize"
           tabStyle={{backgroundColor: 'white'}}
-          activeTabStyle={{backgroundColor: 'white'}}>
+          activeTabStyle={{backgroundColor: 'white'}}
+          activeTextStyle={{color: 'black'}}
+          textStyle={{color: 'grey'}}>
           <Texturize />
         </Tab>
         <Tab
           heading="PFS"
           tabStyle={{backgroundColor: 'white'}}
-          activeTabStyle={{backgroundColor: 'white'}}>
+          activeTabStyle={{backgroundColor: 'white'}}
+          activeTextStyle={{color: 'black'}}
+          textStyle={{color: 'grey'}}>
           <PFS />
         </Tab>
         <Tab
           heading="visolai"
           tabStyle={{backgroundColor: 'white'}}
-          activeTabStyle={{backgroundColor: 'white'}}>
+          activeTabStyle={{backgroundColor: 'white'}}
+          activeTextStyle={{color: 'black'}}
+          textStyle={{color: 'grey'}}>
           <Tab5 />
         </Tab>
       </Tabs>

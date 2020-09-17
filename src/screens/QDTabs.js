@@ -36,11 +36,6 @@ const QDTabs = ({navigation}) => {
 
   return (
     <Container style={style.container}>
-      <Header style={style.header}>
-        <Item style={{alignItems: 'center'}}>
-          <Title style={style.title}>Quotes & Dispatches </Title>
-        </Item>
-      </Header>
       <Tabs
         tabBarActiveTextColor="black"
         tabBarInactiveTextColor="grey"

@@ -63,6 +63,8 @@ const PostYarnRequirement = ({navigation}) => {
       </Header>
 
       <Tabs
+        tabBarActiveTextColor="black"
+        tabBarInactiveTextColor="grey"
         tabBarUnderlineStyle={{backgroundColor: '#F99F23'}}
         renderTabBar={() => <ScrollableTab />}>
         <Tab

@@ -44,6 +44,10 @@ const MainNavigator = createStackNavigator();
 const bottomTab = createBottomTabNavigator();
 const Drawer = createDrawerNavigator();
 
+const PayScreenComponent = () => {
+  return null;
+};
+
 const App = () => {
   const HomeTabs = () => {
     return (
@@ -71,7 +75,21 @@ const App = () => {
             options={{
               tabBarLabel: 'Post Yarn Requirements',
               tabBarIcon: ({color}) => (
-                <Icon name="bell" color={color} size={25} />
+                <View
+                  style={{
+                    position: 'absolute',
+                    bottom: 0, // space from bottombar
+                    height: 65,
+                    width: 65,
+                    borderRadius: 65,
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    backgroundColor: 'orange',
+                    borderColor: 'white',
+                    borderWidth: 5,
+                  }}>
+                  <Icon name="file-text" color="white" size={30} />
+                </View>
               ),
             }}
           />

@@ -35,8 +35,6 @@ const HeaderComponent = () => {
   const [modalVisible, setModalVisible] = useState(false);
   const [snackVisible, setSnackVisible] = useState(false);
 
-  // const[drawerVisible,setDrawerVisible]=useState(false)
-
   const textInputChange = (val) => {
     if (val.length !== 0) {
       setData({
@@ -65,9 +63,6 @@ const HeaderComponent = () => {
       ...data,
       secureTextEntry: !data.secureTextEntry,
     });
-  };
-  const drawer = () => {
-    DrawerComponent();
   };
 
   const snackBar = () => {

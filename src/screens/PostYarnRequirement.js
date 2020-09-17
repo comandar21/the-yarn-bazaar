@@ -42,45 +42,6 @@ import Tab5 from './PostyarnRequirment/Tab5';
 import Icon from 'react-native-vector-icons/Feather';
 
 const PostYarnRequirement = ({navigation}) => {
-  const [data, setData] = React.useState({
-    phoneno: '',
-    password: '',
-    check_textInputChange: false,
-    secureTextEntry: true,
-  });
-
-  const [modalVisible, setModalVisible] = useState(false);
-
-  const textInputChange = (val) => {
-    if (val.length !== 0) {
-      setData({
-        ...data,
-        phoneno: val,
-        check_textInputChange: true,
-      });
-    } else {
-      setData({
-        ...data,
-        phoneno: val,
-        check_textInputChange: false,
-      });
-    }
-  };
-
-  const hanndlePasswordChange = (val) => {
-    setData({
-      ...data,
-      password: val,
-    });
-  };
-
-  const updateSeureTextEntry = () => {
-    setData({
-      ...data,
-      secureTextEntry: !data.secureTextEntry,
-    });
-  };
-
   return (
     <Container style={style.container}>
       <Header
@@ -102,7 +63,7 @@ const PostYarnRequirement = ({navigation}) => {
       </Header>
 
       <Tabs
-        tabBarUnderlineStyle={{backgroundColor: '#E28135'}}
+        tabBarUnderlineStyle={{backgroundColor: '#F99F23'}}
         renderTabBar={() => <ScrollableTab />}>
         <Tab
           heading="All Yarns"

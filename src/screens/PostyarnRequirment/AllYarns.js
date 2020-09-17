@@ -25,7 +25,7 @@ import {
   ScrollView,
 } from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import Feather from 'react-native-vector-icons/Feather';
+import FeatherIcon from 'react-native-vector-icons/Feather';
 import LinearGradient from 'react-native-linear-gradient';
 import * as Animatable from 'react-native-animatable';
 import {color} from 'react-native-reanimated';
@@ -38,17 +38,30 @@ const AllYarns = ({navigation}) => {
 
   return (
     <View style={style.container}>
-      
-      <View style={{margin: 5}}>
-        <Right>
-          <Text>Sort/Filter</Text>
-        </Right>
+      <View>
+        <TouchableOpacity
+          style={{
+            margin: 10,
+            width: null,
+            height: 40,
+            borderRadius: 5,
+            justifyContent: 'center',
+            alignItems: 'flex-end',
+          }}>
+          <View style={{flexDirection: 'row'}}>
+            <FeatherIcon
+              name="sliders"
+              size={16}
+              style={{marginRight: 5, color: 'grey'}}
+            />
+            <Text style={style.cardtext}>Sort/Filter</Text>
+          </View>
+        </TouchableOpacity>
       </View>
-      <Content style={{margin: 10}}>
+      <Content style={{margin: 5}}>
         <PostYarnCard />
         <PostYarnCard />
         <PostYarnCard />
-        
       </Content>
     </View>
   );
@@ -87,8 +100,7 @@ const style = StyleSheet.create({
   },
 
   cardtext: {
-    color: 'black',
-    fontSize: 12,
+    color: 'grey',
+    fontSize: 16,
   },
- 
 });

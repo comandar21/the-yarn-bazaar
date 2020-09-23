@@ -1,21 +1,5 @@
 import React, {Component, useState, useRef, useEffect} from 'react';
-import {
-  Container,
-  Header,
-  Content,
-  Form,
-  Item,
-  Input,
-  Left,
-  Right,
-  Body,
-  Title,
-  Button,
-  Text,
-  View,
-  Icon,
-  Card,
-} from 'native-base';
+import {Text, View, Icon, Card, Tab, Tabs} from 'native-base';
 import {
   SafeAreaView,
   StyleSheet,
@@ -24,48 +8,23 @@ import {
   Dimensions,
   TextInput,
   ScrollView,
+  FlatList,
 } from 'react-native';
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import FeatherIcon from 'react-native-vector-icons/Feather';
-import LinearGradient from 'react-native-linear-gradient';
-import * as Animatable from 'react-native-animatable';
-import {color} from 'react-native-reanimated';
-import Autocomplete from 'react-native-autocomplete-input';
 import ExploreCard from '../components/ExploreCard';
+// import SearchList from '../components/SearchList';
 
 const Explore = ({navigation}) => {
-  // const pressHandler = () => {
-  //   navigation.navigate('Splashscreen');
-  // };
-
   const [display, setDisplay] = useState(false);
-  // const [options, setOptions] = useState([]);
-  // const [search, setSearch] = useState('');
-  // const wrapperRef = useRef(null);
 
-  const data = [
-    {name: 'cotton'},
-    {name: 'Texurise'},
-    {name: 'PSF'},
-    {name: '60Cotton'},
-    {name: 'texurise'},
+  const searchArray = [
+    {id: '1', name: '60sCotton'},
+    {id: '2', name: '1/60/1 Texurize'},
+    {id: '3', name: '10s Cotton'},
+    {id: '4', name: '2s Hemp'},
+    {id: '5', name: '60s Weaving'},
   ];
-
-  // useEffect(() => {
-  //   window.addEventListener('mousedown', handleClickOutside);
-  //   return () => {
-  //     window.removeEventListener('mousedown', handleClickOutside);
-  //   };
-  // });
-
-  // const handleClickOutside = (event) => {
-  //   const {current: wrap} = wrapperRef;
-  //   if (wrap && !wrap.contains(event.target)) {
-  //     setDisplay(false);
-  //   }
-  // };
-
-  // setOptions(data);
 
   return (
     <View style={style.container}>
@@ -97,11 +56,25 @@ const Explore = ({navigation}) => {
         </View>
       </View>
       {display && (
-        <View style={{height: 200, width: null, backgroundColor: 'white'}}>
-          <Text>hello</Text>
-          <Text>hello</Text>
-          <Text>hello</Text>
-          <Text>hello</Text>
+        <View style={{height: '100%', width: null, backgroundColor: 'white'}}>
+          <Tabs
+            tabBarActiveTextColor="black"
+            tabBarInactiveTextColor="grey"
+            locked
+            tabBarUnderlineStyle={{backgroundColor: '#F99F23'}}>
+            <Tab
+              heading="Product"
+              tabStyle={{backgroundColor: 'white'}}
+              activeTabStyle={{backgroundColor: 'white'}}>
+              <SearchList array={searchArray} />
+            </Tab>
+            <Tab
+              heading="Supplier"
+              tabStyle={{backgroundColor: 'white'}}
+              activeTabStyle={{backgroundColor: 'white'}}>
+              <SearchList array={searchArray} />
+            </Tab>
+          </Tabs>
         </View>
       )}
       <View>
@@ -143,6 +116,50 @@ const Explore = ({navigation}) => {
 };
 
 export default Explore;
+
+const SearchList = (props) => {
+  const {array} = props;
+  const renderSeparator = () => {
+    return (
+      <View
+        style={{
+          height: 1,
+          width: '86%',
+          backgroundColor: '#CED0CE',
+          marginLeft: '5%',
+        }}
+      />
+    );
+  };
+
+  return (
+    <View>
+      <FlatList
+        data={array}
+        renderItem={({item}) => (
+          <TouchableOpacity onPress={() => alert('Item pressed!')}>
+            <View
+              style={{
+                flexDirection: 'row',
+                padding: 16,
+                alignItems: 'center',
+              }}>
+              <Text
+                key={item.key}
+                category="s1"
+                style={{
+                  color: '#000',
+                }}>
+                {item.name}
+              </Text>
+            </View>
+          </TouchableOpacity>
+        )}
+        ItemSeparatorComponent={renderSeparator}
+      />
+    </View>
+  );
+};
 
 const style = StyleSheet.create({
   container: {

@@ -12,41 +12,27 @@ import PostYarnRequirement from './src/screens/PostYarnRequirement';
 import Explore from './src/screens/Explore';
 import Notification from './src/screens/Notification';
 import AboutUs from './src/screens/AboutUs';
-
-import FeatherIcon from 'react-native-vector-icons/Feather';
-import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
-import {
-  Container,
-  Header,
-  Content,
-  Form,
-  Item,
-  Input,
-  Left,
-  Right,
-  Body,
-  Tab,
-  Tabs,
-  ScrollableTab,
-  Title,
-  Button,
-  Text,
-  View,
-  Label,
-} from 'native-base';
-import DrawerComponent from './src/components/DrawerComponent';
-import Snackbar from 'react-native-snackbar';
-import SnackBar from 'react-native-snackbar-component';
+import MoreInfoQD from './src/screens/MoreInfoQ&D';
+import {Container, View} from 'native-base';
 import HeaderComponent from './src/components/HeaderComponent';
 
 // import Giftedchat from './src/screens/Giftedchat';
 const MainNavigator = createStackNavigator();
 const bottomTab = createBottomTabNavigator();
 const Drawer = createDrawerNavigator();
+const QDStackNavigator = createStackNavigator();
 
-const PayScreenComponent = () => {
-  return null;
-};
+function QuotesDispatchesTab() {
+  return (
+    <QDStackNavigator.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}>
+      <QDStackNavigator.Screen name="MoreInfoQD" component={MoreInfoQD} />
+      <QDStackNavigator.Screen name="QDHome" component={QDTabs} />
+    </QDStackNavigator.Navigator>
+  );
+}
 
 const App = () => {
   const HomeTabs = () => {
@@ -95,7 +81,7 @@ const App = () => {
           />
           <bottomTab.Screen
             name="Profile"
-            component={QDTabs}
+            component={QuotesDispatchesTab}
             options={{
               tabBarLabel: 'Qoutes & Dispatches',
               tabBarIcon: ({color}) => (
@@ -117,6 +103,7 @@ const App = () => {
         }}>
         <Drawer.Screen name="Home" component={HomeTabs} />
         <Drawer.Screen name="AboutUs" component={AboutUs} />
+        <Drawer.Screen name="MoreInfoQD" component={MoreInfoQD} />
       </Drawer.Navigator>
     );
   };

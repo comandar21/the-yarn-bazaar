@@ -25,6 +25,10 @@ import StepIndicator from 'react-native-step-indicator';
 
 const MyOrdersCard = ({navigation}) => {
   const labels = ['Planned', 'Dispatched', 'Received', 'Closed'];
+
+  const pressHandler = () => {
+    navigation.navigate('MoreInfoQD');
+  };
   const customStyles = {
     stepIndicatorSize: 25,
     currentStepIndicatorSize: 30,
@@ -47,10 +51,6 @@ const MyOrdersCard = ({navigation}) => {
     labelColor: '#999999',
     labelSize: 12,
     currentStepLabelColor: '#F99F23',
-  };
-
-  const pressHandler = () => {
-    navigation.navigate('Splashscreen');
   };
 
   return (
@@ -139,7 +139,8 @@ const MyOrdersCard = ({navigation}) => {
               alignItems: 'center',
               borderColor: '#F99F23',
               borderWidth: 1,
-            }}>
+            }}
+            onPress={pressHandler}>
             <Text style={{color: '#F99F23', fontFamily: 'AvenirLTStd-Roman'}}>
               More Info
             </Text>

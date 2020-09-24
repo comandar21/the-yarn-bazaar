@@ -84,7 +84,7 @@ const HeaderComponent = () => {
     <View>
       <Header style={style.header}>
         <Left>
-          <TouchableOpacity onPress={() => drawer}>
+          <TouchableOpacity>
             <FeatherIcon name="menu" style={style.title} size={25} />
           </TouchableOpacity>
         </Left>

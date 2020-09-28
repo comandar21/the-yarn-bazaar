@@ -8,6 +8,7 @@ import {
   ListItem,
   Right,
   Left,
+  Content,
 } from 'native-base';
 import {StyleSheet, Dimensions, Image, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
@@ -88,135 +89,205 @@ const style = StyleSheet.create({
     color: '#E18335',
     fontFamily: 'AvenirLTStd-Book',
   },
+  list: {
+    backgroundColor: '#ffffff',
+  },
+  listItem: {
+    fontSize: 17,
+    fontFamily: 'AvenirLTStd-Roman',
+    color: '#38454F',
+  },
+  complaintView: {
+    backgroundColor: '#ffffff',
+    paddingLeft: 20,
+    height: 50,
+    justifyContent: 'center',
+  },
+  complaintText: {color: 'red'},
 });
 
 const About = ({navigation}) => {
   return (
     <View style={style.container}>
-      <View>
-        <Text style={style.title}>Materials</Text>
-      </View>
-      <View style={{marginLeft: 16, marginRight: 16}}>
-        <Card style={style.card}>
-          <View style={style.innnerCard}>
-            <TouchableOpacity>
-              <View style={style.innerCardLogo}>
-                <Text style={{color: 'white'}}>61s</Text>
+      <Content>
+        <View>
+          <Text style={style.title}>Materials</Text>
+        </View>
+        <View style={{marginLeft: 16, marginRight: 16}}>
+          <Card style={style.card}>
+            <View style={style.innnerCard}>
+              <TouchableOpacity>
+                <View style={style.innerCardLogo}>
+                  <Text style={{color: 'white'}}>61s</Text>
+                </View>
+                <View style={style.innerCardLogoText}>
+                  <Text style={{fontSize: 10, fontFamily: 'AvenirLTStd-Roman'}}>
+                    Cotton
+                  </Text>
+                </View>
+              </TouchableOpacity>
+            </View>
+            <View style={style.cardContentView}>
+              <View>
+                <Text style={style.cardTitle}>SINTEX Mills</Text>
               </View>
-              <View style={style.innerCardLogoText}>
-                <Text style={{fontSize: 10, fontFamily: 'AvenirLTStd-Roman'}}>
-                  Cotton
+              <View>
+                <Text style={style.cardText}>
+                  Combed, Compact, Ring, Frame, Weaving
                 </Text>
               </View>
-            </TouchableOpacity>
-          </View>
-          <View style={style.cardContentView}>
-            <View>
-              <Text style={style.cardTitle}>SINTEX Mills</Text>
             </View>
-            <View>
-              <Text style={style.cardText}>
-                Combed, Compact, Ring, Frame, Weaving
-              </Text>
+            <View style={style.qtyTextView}>
+              <Text style={style.qtyText}>4 Tons</Text>
             </View>
-          </View>
-          <View style={style.qtyTextView}>
-            <Text style={style.qtyText}>4 Tons</Text>
-          </View>
-        </Card>
-        <Card style={style.card}>
-          <View style={style.innnerCard}>
-            <TouchableOpacity>
-              <View style={style.innerCardLogo}>
-                <Text style={{color: 'white'}}>61s</Text>
+          </Card>
+          <Card style={style.card}>
+            <View style={style.innnerCard}>
+              <TouchableOpacity>
+                <View style={style.innerCardLogo}>
+                  <Text style={{color: 'white'}}>61s</Text>
+                </View>
+                <View style={style.innerCardLogoText}>
+                  <Text style={{fontSize: 10, fontFamily: 'AvenirLTStd-Roman'}}>
+                    Cotton
+                  </Text>
+                </View>
+              </TouchableOpacity>
+            </View>
+            <View style={style.cardContentView}>
+              <View>
+                <Text style={style.cardTitle}>SINTEX Mills</Text>
               </View>
-              <View style={style.innerCardLogoText}>
-                <Text style={{fontSize: 10, fontFamily: 'AvenirLTStd-Roman'}}>
-                  Cotton
+              <View>
+                <Text style={style.cardText}>
+                  Combed, Compact, Ring, Frame, Weaving
                 </Text>
               </View>
-            </TouchableOpacity>
-          </View>
-          <View style={style.cardContentView}>
-            <View>
-              <Text style={style.cardTitle}>SINTEX Mills</Text>
             </View>
-            <View>
-              <Text style={style.cardText}>
-                Combed, Compact, Ring, Frame, Weaving
-              </Text>
+            <View style={style.qtyTextView}>
+              <Text style={style.qtyText}>4 Tons</Text>
             </View>
-          </View>
-          <View style={style.qtyTextView}>
-            <Text style={style.qtyText}>4 Tons</Text>
-          </View>
-        </Card>
-      </View>
-      <View style={{marginTop: 15}}>
-        <List style={{backgroundColor: '#ffffff'}}>
-          <ListItem>
-            <Left>
-              <Text
-                style={{
-                  fontSize: 17,
-                  fontFamily: 'AvenirLTStd-Roman',
-                  color: '#38454F',
-                }}>
-                Driver Number
-              </Text>
-            </Left>
-            <Text
-              style={{
-                color: '#3C3C43',
-                fontSize: 17,
-                fontFamily: 'AvenirLTStd-Roman',
-              }}>
-              +91 55555 66666
-            </Text>
-            <Right>
-              <Icon name="navigate-next" color="#38454F" size={20} />
-            </Right>
-          </ListItem>
-          <ListItem>
-            <Left>
-              <Text
-                style={{
-                  fontSize: 17,
-                  fontFamily: 'AvenirLTStd-Roman',
-                  color: '#38454F',
-                }}>
-                Dispatch Date
-              </Text>
-            </Left>
-            <Text
-              style={{
-                color: '#3C3C43',
-                fontSize: 17,
-                fontFamily: 'AvenirLTStd-Roman',
-              }}>
-              20/07/2020
-            </Text>
-            <Right>
-              <Icon name="navigate-next" color="#38454F" size={20} />
-            </Right>
-          </ListItem>
-          <ListItem>
-            <Left>
-              <Text
-                style={{
-                  fontSize: 17,
-                  fontFamily: 'AvenirLTStd-Roman',
-                  color: '#38454F',
-                }}>
-                Receiving Date
-              </Text>
-            </Left>
-            <Right>
-              <Icon name="navigate-next" color="#38454F" size={20} />
-            </Right>
-          </ListItem>
-        </List>
-      </View>
+          </Card>
+          <Card style={style.card}>
+            <View style={style.innnerCard}>
+              <TouchableOpacity>
+                <View style={style.innerCardLogo}>
+                  <Text style={{color: 'white'}}>61s</Text>
+                </View>
+                <View style={style.innerCardLogoText}>
+                  <Text style={{fontSize: 10, fontFamily: 'AvenirLTStd-Roman'}}>
+                    Cotton
+                  </Text>
+                </View>
+              </TouchableOpacity>
+            </View>
+            <View style={style.cardContentView}>
+              <View>
+                <Text style={style.cardTitle}>SINTEX Mills</Text>
+              </View>
+              <View>
+                <Text style={style.cardText}>
+                  Combed, Compact, Ring, Frame, Weaving
+                </Text>
+              </View>
+            </View>
+            <View style={style.qtyTextView}>
+              <Text style={style.qtyText}>4 Tons</Text>
+            </View>
+          </Card>
+          <Card style={style.card}>
+            <View style={style.innnerCard}>
+              <TouchableOpacity>
+                <View style={style.innerCardLogo}>
+                  <Text style={{color: 'white'}}>61s</Text>
+                </View>
+                <View style={style.innerCardLogoText}>
+                  <Text style={{fontSize: 10, fontFamily: 'AvenirLTStd-Roman'}}>
+                    Cotton
+                  </Text>
+                </View>
+              </TouchableOpacity>
+            </View>
+            <View style={style.cardContentView}>
+              <View>
+                <Text style={style.cardTitle}>SINTEX Mills</Text>
+              </View>
+              <View>
+                <Text style={style.cardText}>
+                  Combed, Compact, Ring, Frame, Weaving
+                </Text>
+              </View>
+            </View>
+            <View style={style.qtyTextView}>
+              <Text style={style.qtyText}>4 Tons</Text>
+            </View>
+          </Card>
+          <Card style={style.card}>
+            <View style={style.innnerCard}>
+              <TouchableOpacity>
+                <View style={style.innerCardLogo}>
+                  <Text style={{color: 'white'}}>61s</Text>
+                </View>
+                <View style={style.innerCardLogoText}>
+                  <Text style={{fontSize: 10, fontFamily: 'AvenirLTStd-Roman'}}>
+                    Cotton
+                  </Text>
+                </View>
+              </TouchableOpacity>
+            </View>
+            <View style={style.cardContentView}>
+              <View>
+                <Text style={style.cardTitle}>SINTEX Mills</Text>
+              </View>
+              <View>
+                <Text style={style.cardText}>
+                  Combed, Compact, Ring, Frame, Weaving
+                </Text>
+              </View>
+            </View>
+            <View style={style.qtyTextView}>
+              <Text style={style.qtyText}>4 Tons</Text>
+            </View>
+          </Card>
+        </View>
+        <View style={{marginTop: 15}}>
+          <List style={style.list}>
+            <ListItem>
+              <Left>
+                <Text style={style.listItem}>Driver Number</Text>
+              </Left>
+              <Text style={style.listItem}>+91 55555 66666</Text>
+              <Right>
+                <Icon name="navigate-next" color="#38454F" size={20} />
+              </Right>
+            </ListItem>
+            <ListItem>
+              <Left>
+                <Text style={style.listItem}>Dispatch Date</Text>
+              </Left>
+              <Text style={style.listItem}>20/07/2020</Text>
+              <Right>
+                <Icon name="navigate-next" color="#38454F" size={20} />
+              </Right>
+            </ListItem>
+            <ListItem>
+              <Left>
+                <Text style={style.listItem}>Receiving Date</Text>
+              </Left>
+              <Right>
+                <Icon name="navigate-next" color="#38454F" size={20} />
+              </Right>
+            </ListItem>
+          </List>
+        </View>
+        <View style={{marginTop: 10}}>
+          <TouchableOpacity>
+            <View style={style.complaintView}>
+              <Text style={style.complaintText}>Send a Complaint</Text>
+            </View>
+          </TouchableOpacity>
+        </View>
+      </Content>
     </View>
   );
 };

@@ -6,6 +6,10 @@ import About from './MoreInfoQ&D/About';
 import Document from './MoreInfoQ&D/Document';
 import Payment from './MoreInfoQ&D/Payment';
 
+import MyOrders from './Quotes&Disapatches/MyOrders';
+import MyDispatches from './Quotes&Disapatches/MyDispatches';
+import MyQuotes from './Quotes&Disapatches/MyQuotes';
+
 const MoreInfoQD = ({navigation}) => {
   const labels = ['Planned', 'Dispatched', 'Received', 'Closed'];
 
@@ -38,7 +42,7 @@ const MoreInfoQD = ({navigation}) => {
 
   return (
     <Container style={style.container}>
-      <Card style={{padding: 5}}>
+      {/* <Card style={{padding: 5}}>
         <View>
           <Text
             style={{
@@ -89,7 +93,18 @@ const MoreInfoQD = ({navigation}) => {
             currentPosition={2}
           />
         </View>
-      </Card>
+      </Card> */}
+      {/* <Tabs>
+          <Tab heading="About">
+            <About />
+          </Tab>
+          <Tab heading="Document">
+            <Document />
+          </Tab>
+          <Tab heading="Payment">
+            <Payment />
+          </Tab>
+        </Tabs> */}
       <Tabs
         tabBarActiveTextColor="black"
         tabBarInactiveTextColor="grey"

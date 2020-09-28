@@ -28,8 +28,8 @@ function QuotesDispatchesTab() {
       screenOptions={{
         headerShown: false,
       }}>
-      <QDStackNavigator.Screen name="MoreInfoQD" component={MoreInfoQD} />
       <QDStackNavigator.Screen name="QDHome" component={QDTabs} />
+      <QDStackNavigator.Screen name="MoreInfoQD" component={MoreInfoQD} />
     </QDStackNavigator.Navigator>
   );
 }

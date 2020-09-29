@@ -13,9 +13,9 @@ import {
 } from 'native-base';
 import {StyleSheet, TouchableOpacity, Image, StatusBar} from 'react-native';
 import StepIndicator from 'react-native-step-indicator';
-import About from './DispatchInformation/About';
-import Document from './DispatchInformation/Document';
-import Payment from './DispatchInformation/Payment';
+import About from './About';
+import Document from './Document';
+import Payment from './Payment';
 
 const DispatchInformation = ({navigation}) => {
   const labels = ['Planned', 'Dispatched', 'Received', 'Closed'];
@@ -84,7 +84,7 @@ const DispatchInformation = ({navigation}) => {
             <Card style={{borderRadius: 5}}>
               <TouchableOpacity>
                 <Image
-                  source={require('./media/sin_tex.jpg')}
+                  source={require('../../../media/sin_tex.jpg')}
                   style={{
                     height: 70,
                     width: null,
@@ -102,7 +102,14 @@ const DispatchInformation = ({navigation}) => {
               }}>
               SINTEX MILLS
             </Text>
-            <Text style={{color: '#F99F23'}}>61sCotton,Combed</Text>
+            <Text
+              style={{
+                color: '#F99F23',
+                fontSize: 17,
+                fontFamily: 'AvenirLTStd-Roman',
+              }}>
+              61sCotton,Combed
+            </Text>
           </View>
         </View>
         <View style={{marginLeft: 5}}>
@@ -119,17 +126,6 @@ const DispatchInformation = ({navigation}) => {
           />
         </View>
       </Card>
-      {/* <Tabs>
-          <Tab heading="About">
-            <About />
-          </Tab>
-          <Tab heading="Document">
-            <Document />
-          </Tab>
-          <Tab heading="Payment">
-            <Payment />
-          </Tab>
-        </Tabs> */}
       <Tabs
         tabBarActiveTextColor="black"
         tabBarInactiveTextColor="grey"

@@ -28,7 +28,7 @@ import FeatherIcon from 'react-native-vector-icons/Feather';
 import LinearGradient from 'react-native-linear-gradient';
 import * as Animatable from 'react-native-animatable';
 import {color} from 'react-native-reanimated';
-import MyQuotesCards from '../../components/MyQuotesCards';
+import MyQuotesCards from '../../../components/MyQuotesCards';
 
 const MyQuotes = ({navigation}) => {
   const pressHandler = () => {

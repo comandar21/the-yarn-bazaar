@@ -29,7 +29,7 @@ import Feather from 'react-native-vector-icons/Feather';
 import LinearGradient from 'react-native-linear-gradient';
 import * as Animatable from 'react-native-animatable';
 import {color} from 'react-native-reanimated';
-import MyDispatchesCards from '../../components/MyDispatchesCards';
+import MyDispatchesCards from '../../../components/MyDispatchesCards';
 
 const MyDispatches = ({navigation}) => {
   const pressHandler = () => {

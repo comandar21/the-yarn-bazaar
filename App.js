@@ -7,19 +7,19 @@ import Icon from 'react-native-vector-icons/Feather';
 import {StyleSheet, TouchableOpacity, Modal} from 'react-native';
 import Splashscreen from './src/screens/Splashscreen';
 import HeaderComponent from './src/components/HeaderComponent';
-import QuotesDispatches from './src/screens/Quotes&Dispatches';
+import QuotesDispatches from './src/screens/Quotes&Disapatches/Quotes&Dispatches';
 import PostYarnRequirement from './src/screens/PostYarnRequirement';
 import Explore from './src/screens/Explore';
 import AboutUs from './src/screens/AboutUs';
-import DispatchInformation from './src/screens/DispatchInformation';
+import DispatchInformation from './src/screens/Quotes&Disapatches/MyDispatches/DispatchInformation/DispatchInformation';
 import {Container, View} from 'native-base';
-import PlanDispatch from './src/screens/Quotes&Disapatches/PlanDispatch';
-import MyDispatches from './src/screens/Quotes&Disapatches/MyDispatches';
-import MyOrders from './src/screens/Quotes&Disapatches/MyOrders';
-import MyQuotes from './src/screens/Quotes&Disapatches/MyQuotes';
-import About from './src/screens/DispatchInformation/About';
-import Document from './src/screens/DispatchInformation/Document';
-import Payment from './src/screens/DispatchInformation/Payment';
+import MyDispatches from './src/screens/Quotes&Disapatches/MyDispatches/MyDispatches';
+import MyOrders from './src/screens/Quotes&Disapatches/MyOrders/MyOrders';
+import MyQuotes from './src/screens/Quotes&Disapatches/MyQuotes/MyQuotes';
+import About from './src/screens/Quotes&Disapatches/MyDispatches/DispatchInformation/About';
+import Document from './src/screens/Quotes&Disapatches/MyDispatches/DispatchInformation/Document';
+import Payment from './src/screens/Quotes&Disapatches/MyDispatches/DispatchInformation/Payment';
+import PlanDispatch from './src/screens/Quotes&Disapatches/MyOrders/PlanDispatch';
 
 // import Giftedchat from './src/screens/Giftedchat';
 const MainNavigator = createStackNavigator();
@@ -43,6 +43,7 @@ function QuotesDispatchesTab() {
       <QDStackNavigator.Screen name="About" component={About} />
       <QDStackNavigator.Screen name="Document" component={Document} />
       <QDStackNavigator.Screen name="Payment" component={Payment} />
+      <QDStackNavigator.Screen name="PlanDispatch" component={PlanDispatch} />
       <QDStackNavigator.Screen
         name="DispatchInformation"
         component={DispatchInformation}

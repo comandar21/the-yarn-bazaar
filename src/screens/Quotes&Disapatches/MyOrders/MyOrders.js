@@ -29,11 +29,11 @@ import {
 } from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import FeatherIcon from 'react-native-vector-icons/Feather';
-import MyOrdersCard from '../../components/MyOrdersCard';
+import MyOrdersCard from '../../../components/MyOrdersCard';
 
 const MyOrders = ({navigation}) => {
   const pressHandler = () => {
-    navigation.navigate('Splashscreen');
+    navigation.navigate('PlanDispatch');
   };
   return (
     <View style={style.container}>
@@ -68,7 +68,8 @@ const MyOrders = ({navigation}) => {
                 borderRadius: 5,
                 justifyContent: 'center',
                 alignItems: 'center',
-              }}>
+              }}
+              onPress={pressHandler}>
               <Text style={{color: 'white'}}>Plan Dispatch</Text>
             </TouchableOpacity>
           </View>

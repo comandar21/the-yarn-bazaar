@@ -20,6 +20,7 @@ import Payment from './MoreInfoQ&D/Payment';
 const MoreInfoQD = ({navigation}) => {
   const labels = ['Planned', 'Dispatched', 'Received', 'Closed'];
 
+
   const pressHandler = () => {
     navigation.navigate('MoreInfoQD');
   };
@@ -157,5 +158,6 @@ const MoreInfoQD = ({navigation}) => {
     </Container>
   );
 };
+
 
 export default MoreInfoQD;

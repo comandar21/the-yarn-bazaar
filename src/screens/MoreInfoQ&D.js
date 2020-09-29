@@ -1,14 +1,21 @@
 import React, {Component} from 'react';
-import {Container, Text, View, Icon, Card, Tabs, Tab} from 'native-base';
+import {
+  Container,
+  Text,
+  View,
+  Icon,
+  Card,
+  Tabs,
+  Tab,
+  Header,
+  Left,
+  Body,
+} from 'native-base';
 import {StyleSheet, TouchableOpacity, Image, StatusBar} from 'react-native';
 import StepIndicator from 'react-native-step-indicator';
 import About from './MoreInfoQ&D/About';
 import Document from './MoreInfoQ&D/Document';
 import Payment from './MoreInfoQ&D/Payment';
-
-import MyOrders from './Quotes&Disapatches/MyOrders';
-import MyDispatches from './Quotes&Disapatches/MyDispatches';
-import MyQuotes from './Quotes&Disapatches/MyQuotes';
 
 const MoreInfoQD = ({navigation}) => {
   const labels = ['Planned', 'Dispatched', 'Received', 'Closed'];
@@ -40,9 +47,27 @@ const MoreInfoQD = ({navigation}) => {
     currentStepLabelColor: '#F99F23',
   };
 
+  const style = StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: '#F6F6F6',
+    },
+    header: {
+      backgroundColor: '#ffffff',
+    },
+  });
+
   return (
     <Container style={style.container}>
-      {/* <Card style={{padding: 5}}>
+      <Header style={style.header}>
+        <Left>
+          <Icon name="arrow-back" />
+        </Left>
+        <Body>
+          <Text>Dispatch Information</Text>
+        </Body>
+      </Header>
+      <Card style={{padding: 5}}>
         <View>
           <Text
             style={{
@@ -93,7 +118,7 @@ const MoreInfoQD = ({navigation}) => {
             currentPosition={2}
           />
         </View>
-      </Card> */}
+      </Card>
       {/* <Tabs>
           <Tab heading="About">
             <About />
@@ -134,46 +159,3 @@ const MoreInfoQD = ({navigation}) => {
 };
 
 export default MoreInfoQD;
-
-const style = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#F6F6F6',
-  },
-
-  button: {
-    marginTop: 5,
-    borderRadius: 5,
-    marginLeft: 5,
-    backgroundColor: 'white',
-    height: 30,
-    width: 80,
-    borderRadius: 50,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-
-  mainbutton: {
-    marginTop: 5,
-    borderRadius: 5,
-    marginLeft: 5,
-    backgroundColor: '#F99F23',
-  },
-
-  text: {
-    color: 'black',
-    fontSize: 8,
-    fontFamily: 'AvenirLTStd-Roman',
-  },
-
-  cardtext: {
-    color: 'black',
-    fontSize: 12,
-    fontFamily: 'AvenirLTStd-Roman',
-  },
-  rowbutton: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

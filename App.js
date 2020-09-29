@@ -14,6 +14,7 @@ import Notification from './src/screens/Notification';
 import AboutUs from './src/screens/AboutUs';
 import MoreInfoQD from './src/screens/MoreInfoQ&D';
 import {Container, View} from 'native-base';
+import PlanDispatch from './src/screens/Quotes&Disapatches/PlanDispatch';
 import HeaderComponent from './src/components/HeaderComponent';
 
 // import Giftedchat from './src/screens/Giftedchat';
@@ -104,6 +105,7 @@ const App = () => {
         <Drawer.Screen name="Home" component={HomeTabs} />
         <Drawer.Screen name="AboutUs" component={AboutUs} />
         <Drawer.Screen name="MoreInfoQD" component={MoreInfoQD} />
+         <Drawer.Screen name="PlanDispatch" component={PlanDispatch} /> 
       </Drawer.Navigator>
     );
   };

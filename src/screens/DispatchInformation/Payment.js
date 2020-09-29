@@ -63,7 +63,7 @@ const Payment = ({navigation}) => {
               <View style={{width: 150, height: 14}}>
                 <Text style={{fontSize: 17}}>Invoice</Text>
               </View>
-              <Text style={{color: '#E18335', marginLeft: 90, fontSize: 17}}>
+              <Text style={{color: '#E18335', marginLeft: 70, fontSize: 17}}>
                 Completed
               </Text>
               <Icon
@@ -159,7 +159,7 @@ const Payment = ({navigation}) => {
               <View style={{width: 150, height: 14}}>
                 <Text style={{fontSize: 17}}>Convenience Fees</Text>
               </View>
-              <Text style={{color: '#E18335', marginLeft: 90, fontSize: 17}}>
+              <Text style={{color: '#E18335', marginLeft: 70, fontSize: 17}}>
                 Completed
               </Text>
               <Icon

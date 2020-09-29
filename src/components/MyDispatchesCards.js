@@ -27,7 +27,7 @@ const MyOrdersCard = ({navigation}) => {
   const labels = ['Planned', 'Dispatched', 'Received', 'Closed'];
 
   const pressHandler = () => {
-    navigation.navigate('MoreInfoQD');
+    navigation.navigate('DispatchInformation');
   };
   const customStyles = {
     stepIndicatorSize: 25,
@@ -52,6 +52,8 @@ const MyOrdersCard = ({navigation}) => {
     labelSize: 12,
     currentStepLabelColor: '#F99F23',
   };
+
+  console.log(navigation);
 
   return (
     <Card>

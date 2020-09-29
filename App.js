@@ -5,17 +5,21 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import Icon from 'react-native-vector-icons/Feather';
 import {StyleSheet, TouchableOpacity, Modal} from 'react-native';
-
 import Splashscreen from './src/screens/Splashscreen';
-import QDTabs from './src/screens/QDTabs';
+import HeaderComponent from './src/components/HeaderComponent';
+import QuotesDispatches from './src/screens/Quotes&Dispatches';
 import PostYarnRequirement from './src/screens/PostYarnRequirement';
 import Explore from './src/screens/Explore';
-import Notification from './src/screens/Notification';
 import AboutUs from './src/screens/AboutUs';
-import MoreInfoQD from './src/screens/MoreInfoQ&D';
+import DispatchInformation from './src/screens/DispatchInformation';
 import {Container, View} from 'native-base';
 import PlanDispatch from './src/screens/Quotes&Disapatches/PlanDispatch';
-import HeaderComponent from './src/components/HeaderComponent';
+import MyDispatches from './src/screens/Quotes&Disapatches/MyDispatches';
+import MyOrders from './src/screens/Quotes&Disapatches/MyOrders';
+import MyQuotes from './src/screens/Quotes&Disapatches/MyQuotes';
+import About from './src/screens/DispatchInformation/About';
+import Document from './src/screens/DispatchInformation/Document';
+import Payment from './src/screens/DispatchInformation/Payment';
 
 // import Giftedchat from './src/screens/Giftedchat';
 const MainNavigator = createStackNavigator();
@@ -29,8 +33,20 @@ function QuotesDispatchesTab() {
       screenOptions={{
         headerShown: false,
       }}>
-      <QDStackNavigator.Screen name="QDHome" component={QDTabs} />
-      <QDStackNavigator.Screen name="MoreInfoQD" component={MoreInfoQD} />
+      <QDStackNavigator.Screen
+        name="QuotesDispatches"
+        component={QuotesDispatches}
+      />
+      <QDStackNavigator.Screen name="MyDispatches" component={MyDispatches} />
+      <QDStackNavigator.Screen name="MyOrders" component={MyOrders} />
+      <QDStackNavigator.Screen name="MyQuotes" component={MyQuotes} />
+      <QDStackNavigator.Screen name="About" component={About} />
+      <QDStackNavigator.Screen name="Document" component={Document} />
+      <QDStackNavigator.Screen name="Payment" component={Payment} />
+      <QDStackNavigator.Screen
+        name="DispatchInformation"
+        component={DispatchInformation}
+      />
     </QDStackNavigator.Navigator>
   );
 }
@@ -84,7 +100,7 @@ const App = () => {
             name="Profile"
             component={QuotesDispatchesTab}
             options={{
-              tabBarLabel: 'Qoutes & Dispatches',
+              tabBarLabel: 'Quotes & Dispatches',
               tabBarIcon: ({color}) => (
                 <Icon name="check-square" color={color} size={25} />
               ),
@@ -104,8 +120,7 @@ const App = () => {
         }}>
         <Drawer.Screen name="Home" component={HomeTabs} />
         <Drawer.Screen name="AboutUs" component={AboutUs} />
-        <Drawer.Screen name="MoreInfoQD" component={MoreInfoQD} />
-         <Drawer.Screen name="PlanDispatch" component={PlanDispatch} /> 
+        <Drawer.Screen name="PlanDispatch" component={PlanDispatch} />
       </Drawer.Navigator>
     );
   };

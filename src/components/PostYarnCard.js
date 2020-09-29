@@ -50,7 +50,7 @@ const PostYarnCard = ({navigation}) => {
             <TouchableOpacity>
               <View
                 style={{
-                  backgroundColor: '#2B3856',
+                  backgroundColor: '#38454F',
                   height: 70,
                   width: null,
                   justifyContent: 'center',

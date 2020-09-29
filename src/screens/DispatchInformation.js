@@ -13,16 +13,15 @@ import {
 } from 'native-base';
 import {StyleSheet, TouchableOpacity, Image, StatusBar} from 'react-native';
 import StepIndicator from 'react-native-step-indicator';
-import About from './MoreInfoQ&D/About';
-import Document from './MoreInfoQ&D/Document';
-import Payment from './MoreInfoQ&D/Payment';
+import About from './DispatchInformation/About';
+import Document from './DispatchInformation/Document';
+import Payment from './DispatchInformation/Payment';
 
-const MoreInfoQD = ({navigation}) => {
+const DispatchInformation = ({navigation}) => {
   const labels = ['Planned', 'Dispatched', 'Received', 'Closed'];
 
-
   const pressHandler = () => {
-    navigation.navigate('MoreInfoQD');
+    navigation.navigate('QuotesDispatches');
   };
   const customStyles = {
     stepIndicatorSize: 25,
@@ -62,7 +61,7 @@ const MoreInfoQD = ({navigation}) => {
     <Container style={style.container}>
       <Header style={style.header}>
         <Left>
-          <Icon name="arrow-back" />
+          <Icon name="arrow-back" onPress={pressHandler} />
         </Left>
         <Body>
           <Text>Dispatch Information</Text>
@@ -159,5 +158,4 @@ const MoreInfoQD = ({navigation}) => {
   );
 };
 
-
-export default MoreInfoQD;
+export default DispatchInformation;

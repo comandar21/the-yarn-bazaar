@@ -54,7 +54,7 @@ const MyOrdersCard = ({navigation}) => {
             <TouchableOpacity>
               <View
                 style={{
-                  backgroundColor: '#2B3856',
+                  backgroundColor: '#38454F',
                   height: 50,
                   width: null,
                   justifyContent: 'center',

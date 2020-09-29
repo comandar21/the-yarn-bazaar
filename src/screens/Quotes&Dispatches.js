@@ -45,19 +45,19 @@ const QDTabs = ({navigation}) => {
           heading="My Quotes"
           tabStyle={{backgroundColor: 'white'}}
           activeTabStyle={{backgroundColor: 'white'}}>
-          <MyQuotes />
+          <MyQuotes navigation={navigation} />
         </Tab>
         <Tab
           heading="My Orders"
           tabStyle={{backgroundColor: 'white'}}
           activeTabStyle={{backgroundColor: 'white'}}>
-          <MyOrders />
+          <MyOrders navigation={navigation} />
         </Tab>
         <Tab
           heading="My Dispatches"
           tabStyle={{backgroundColor: 'white'}}
           activeTabStyle={{backgroundColor: 'white'}}>
-          <MyDispatches />
+          <MyDispatches navigation={navigation} />
         </Tab>
       </Tabs>
     </Container>

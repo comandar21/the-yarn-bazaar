@@ -36,13 +36,15 @@ const MyDispatches = ({navigation}) => {
     navigation.navigate('Splashscreen');
   };
 
+  console.log(navigation);
+
   return (
     <View style={style.container}>
       <Content style={{margin: 5}}>
         <View>
-          <MyDispatchesCards />
-          <MyDispatchesCards />
-          <MyDispatchesCards />
+          <MyDispatchesCards navigation={navigation} />
+          <MyDispatchesCards navigation={navigation} />
+          <MyDispatchesCards navigation={navigation} />
         </View>
         <View>
           <TouchableOpacity

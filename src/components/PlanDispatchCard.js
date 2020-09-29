@@ -16,7 +16,7 @@ import {
   Card,
   CardItem,
   Thumbnail,
-  Accordion ,
+  Accordion,
 } from 'native-base';
 import {
   SafeAreaView,
@@ -35,7 +35,6 @@ const PlanDispatchCard = ({navigation}) => {
   //   navigation.navigate('Splashscreen');
   // };
 
-
   return (
     <Card>
       <View>
@@ -47,7 +46,7 @@ const PlanDispatchCard = ({navigation}) => {
             <TouchableOpacity>
               <View
                 style={{
-                  backgroundColor: '#2B3856',
+                  backgroundColor: '#38454F',
                   height: 50,
                   width: null,
                   justifyContent: 'center',
@@ -76,56 +75,48 @@ const PlanDispatchCard = ({navigation}) => {
             </Text>
 
             <View style={{flexDirection: 'row'}}>
-                    <Text>
-                      Combined
-                    </Text>
-                   <View style={{flexDirection: 'row',marginLeft:120}}>
-                      <Text style={{color:'orange',fontSize:11}}>9 Tons</Text>
-                    </View>      
-                </View>  
-
-
-
-
-          
-              <View style={{flexDirection: 'row'}}>
-                    <Text
-                      style={{
-                        marginTop: 5,
-                        fontFamily: 'AvenirLTStd-Roman',
-                        fontSize: 12,
-                      }}>
-                      SINTEX MILLS
-                    </Text>
-                    <View style={{flexDirection: 'row',marginLeft:120 }}>
-                        <Text style={{fontFamily: 'AvenirLTStd-Roman', fontSize: 11}}></Text>
-                        <Text style={{color:'grey',fontSize:10}}>Pending</Text>
-                          
+              <Text>Combined</Text>
+              <View style={{flexDirection: 'row', marginLeft: 120}}>
+                <Text style={{color: 'orange', fontSize: 11}}>9 Tons</Text>
               </View>
-                   
-                </View>  
+            </View>
+
+            <View style={{flexDirection: 'row'}}>
+              <Text
+                style={{
+                  marginTop: 5,
+                  fontFamily: 'AvenirLTStd-Roman',
+                  fontSize: 12,
+                }}>
+                SINTEX MILLS
+              </Text>
+              <View style={{flexDirection: 'row', marginLeft: 120}}>
+                <Text
+                  style={{
+                    fontFamily: 'AvenirLTStd-Roman',
+                    fontSize: 11,
+                  }}></Text>
+                <Text style={{color: 'grey', fontSize: 10}}>Pending</Text>
+              </View>
+            </View>
           </View>
 
           <View style={{flexDirection: 'column', marginTop: 5}}>
-            
-              <View style={{flexDirection: 'row',marginRight:20 }}>
-                <Text style={style.cardtext}>Quantity</Text>
-                  <View style={{flexDirection: 'row',marginLeft:10 }}>
-                  <Text style={style.cardtextunderline}>9 Tons</Text>
-                </View>
+            <View style={{flexDirection: 'row', marginRight: 20}}>
+              <Text style={style.cardtext}>Quantity</Text>
+              <View style={{flexDirection: 'row', marginLeft: 10}}>
+                <Text style={style.cardtextunderline}>9 Tons</Text>
               </View>
-             
-          
-           
+            </View>
+
             <View style={{marginTop: 10}}>
-              <View style={{flexDirection: 'row'}}>      
+              <View style={{flexDirection: 'row'}}>
                 <Text style={style.cardtext}>Date</Text>
-                <View style={{flexDirection: 'row',marginLeft:10 }}>
+                <View style={{flexDirection: 'row', marginLeft: 10}}>
                   <Text style={style.cardtextunderline}>18/07/2020</Text>
-                  <Icon name="calendar" style={{marginLeft:20 }}></Icon>
+                  <Icon name="calendar" style={{marginLeft: 20}}></Icon>
                 </View>
               </View>
-           
             </View>
           </View>
         </View>
@@ -145,7 +136,6 @@ const PlanDispatchCard = ({navigation}) => {
             <Text style={{color: 'white'}}>Add</Text>
           </TouchableOpacity>
         </View>
-     
       </View>
     </Card>
   );

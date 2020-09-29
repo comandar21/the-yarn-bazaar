@@ -44,7 +44,7 @@ const ExploreCard = ({navigation}) => {
       <TouchableOpacity>
         <View
           style={{
-            backgroundColor: '#2B3856',
+            backgroundColor: '#38454F',
             height: 60,
             width: 75,
             justifyContent: 'center',

@@ -20,6 +20,7 @@ import About from './src/screens/Quotes&Disapatches/MyDispatches/DispatchInforma
 import Document from './src/screens/Quotes&Disapatches/MyDispatches/DispatchInformation/Document';
 import Payment from './src/screens/Quotes&Disapatches/MyDispatches/DispatchInformation/Payment';
 import PlanDispatch from './src/screens/Quotes&Disapatches/MyOrders/PlanDispatch';
+import OrderInformation from './src/screens/Quotes&Disapatches/MyOrders/OrderInformation';
 
 // import Giftedchat from './src/screens/Giftedchat';
 const MainNavigator = createStackNavigator();
@@ -47,6 +48,10 @@ function QuotesDispatchesTab() {
       <QDStackNavigator.Screen
         name="DispatchInformation"
         component={DispatchInformation}
+      />
+      <QDStackNavigator.Screen
+        name="OrderInformation"
+        component={OrderInformation}
       />
     </QDStackNavigator.Navigator>
   );
@@ -121,7 +126,6 @@ const App = () => {
         }}>
         <Drawer.Screen name="Home" component={HomeTabs} />
         <Drawer.Screen name="AboutUs" component={AboutUs} />
-        <Drawer.Screen name="PlanDispatch" component={PlanDispatch} />
       </Drawer.Navigator>
     );
   };

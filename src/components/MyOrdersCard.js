@@ -31,7 +31,7 @@ import Icon from 'react-native-vector-icons/Feather';
 
 const MyOrdersCard = ({navigation}) => {
   const pressHandler = () => {
-    navigation.navigate('Splashscreen');
+    navigation.navigate('OrderInformation');
   };
 
   return (
@@ -133,7 +133,8 @@ const MyOrdersCard = ({navigation}) => {
               alignItems: 'center',
               borderColor: '#F99F23',
               borderWidth: 1,
-            }}>
+            }}
+            onPress={pressHandler}>
             <Text style={{color: '#F99F23'}}>More Info</Text>
           </TouchableOpacity>
         </View>

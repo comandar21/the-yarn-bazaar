@@ -87,9 +87,9 @@ const MyOrders = ({navigation}) => {
           </View>
         </View>
         <View>
-          <MyOrdersCard />
-          <MyOrdersCard />
-          <MyOrdersCard />
+          <MyOrdersCard navigation={navigation} />
+          <MyOrdersCard navigation={navigation} />
+          <MyOrdersCard navigation={navigation} />
         </View>
       </Content>
     </View>

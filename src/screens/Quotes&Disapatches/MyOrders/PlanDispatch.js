@@ -47,13 +47,9 @@ const PlanDispatch = ({navigation}) => {
           <Text>Plan Dispatch</Text>
         </Body>
       </Header>
-      <Content style={{margin: 5}}>
-        <View style={{flexDirection: 'row'}}>
-          <View style={{flex: 1}}>
-            <Text style={{marginTop: 10, marginBottom: 10}}>
-              Plan a Dispatch for Your order
-            </Text>
-          </View>
+      <Content style={{margin: 10}}>
+        <View>
+          <Text style={{marginBottom: 5}}>Plan a Dispatch for Your order</Text>
         </View>
         <View>
           <PlanDispatchCard />

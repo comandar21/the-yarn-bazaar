@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, useState} from 'react';
 import {
   Container,
   Header,
@@ -28,173 +28,190 @@ import {
   Image,
   ScrollView,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/Feather';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import FeatherIcon from 'react-native-vector-icons/Feather';
 
 const PlanDispatchCard = ({navigation}) => {
   // const pressHandler = () => {
   //   navigation.navigate('Splashscreen');
   // };
 
+  const [plan, setplan] = useState(false);
+
+  const planExpand = () => {
+    setplan(!plan);
+  };
+
+  const style = StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: '#F6F6F6',
+    },
+
+    title: {
+      fontFamily: 'AvenirLTStd-Roman',
+      fontSize: 17,
+      color: '#38454F',
+      marginLeft: 16,
+      marginTop: 10,
+    },
+    innnerCard: {
+      borderRadius: 5,
+      width: 52,
+      height: 66,
+      marginRight: 10,
+    },
+    cardView: {
+      marginTop: 10,
+    },
+    card: {
+      padding: 10,
+      height: 90,
+      width: null,
+      flexDirection: 'row',
+    },
+
+    cardContentView: {
+      height: 66,
+      width: 200,
+    },
+    cardTitle: {
+      fontFamily: 'AvenirLTStd-Roman',
+      fontSize: 15,
+      color: '#38454F',
+      marginTop: 15,
+    },
+    cardTextView: {
+      height: 30,
+      marginTop: 15,
+      width: 170,
+    },
+    cardText: {
+      fontSize: 12,
+      fontFamily: 'AvenirLTStd-Roman',
+    },
+
+    innerCardLogo: {
+      height: 52,
+      width: 52,
+      backgroundColor: '#38454F',
+      borderTopLeftRadius: 5,
+      borderTopRightRadius: 5,
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    innerCardLogoText: {
+      height: 14,
+      width: 52,
+      backgroundColor: '#ffffff',
+      justifyContent: 'center',
+      alignItems: 'center',
+      color: '#38454F',
+    },
+    qtyTextView: {
+      alignItems: 'flex-end',
+      marginLeft: 40,
+    },
+
+    qtyText: {
+      fontSize: 15,
+      color: '#E18335',
+      fontFamily: 'AvenirLTStd-Book',
+    },
+    accodiontext: {
+      fontSize: 12,
+      fontFamily: 'AvenirLTStd-Roman',
+      color: '#38454F',
+    },
+    cardtextunderline: {
+      fontSize: 12,
+      fontFamily: 'AvenirLTStd-Roman',
+      textDecorationLine: 'underline',
+      color: '#38454F',
+    },
+  });
+
   return (
     <Card>
-      <View>
-        <Text style={style.top_cardtext}>Planned</Text>
-      </View>
-      <View style={{flexDirection: 'row'}}>
-        <View style={{margin: 4}}>
-          <Card style={{borderRadius: 5, width: 52, height: 66}}>
-            <TouchableOpacity>
-              <View
-                style={{
-                  backgroundColor: '#38454F',
-                  height: 50,
-                  width: null,
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  borderTopLeftRadius: 5,
-                  borderTopRightRadius: 5,
-                }}>
-                <Text style={{color: 'white'}}>61s</Text>
-              </View>
-              <View
-                style={{
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                }}>
-                <Text style={{fontFamily: 'AvenirLTStd-Roman', fontSize: 10}}>
-                  Cotton
-                </Text>
-              </View>
-            </TouchableOpacity>
-          </Card>
-        </View>
-        <View style={{flex: 3, margin: 5}}>
-          <View>
-            <Text style={{fontFamily: 'AvenirLTStd-Roman', fontSize: 13}}>
-              Corded,Ring,Frame,
-            </Text>
-
-            <View style={{flexDirection: 'row'}}>
-              <Text>Combined</Text>
-              <View style={{flexDirection: 'row', marginLeft: 120}}>
-                <Text style={{color: 'orange', fontSize: 11}}>9 Tons</Text>
-              </View>
+      <View style={style.card}>
+        <View style={style.innnerCard}>
+          <TouchableOpacity>
+            <View style={style.innerCardLogo}>
+              <Text style={{color: 'white'}}>61s</Text>
             </View>
-
-            <View style={{flexDirection: 'row'}}>
-              <Text
-                style={{
-                  marginTop: 5,
-                  fontFamily: 'AvenirLTStd-Roman',
-                  fontSize: 12,
-                }}>
-                SINTEX MILLS
+            <View style={style.innerCardLogoText}>
+              <Text style={{fontSize: 10, fontFamily: 'AvenirLTStd-Roman'}}>
+                Cotton
               </Text>
-              <View style={{flexDirection: 'row', marginLeft: 120}}>
-                <Text
-                  style={{
-                    fontFamily: 'AvenirLTStd-Roman',
-                    fontSize: 11,
-                  }}></Text>
-                <Text style={{color: 'grey', fontSize: 10}}>Pending</Text>
-              </View>
             </View>
-          </View>
-
-          <View style={{flexDirection: 'column', marginTop: 5}}>
-            <View style={{flexDirection: 'row', marginRight: 20}}>
-              <Text style={style.cardtext}>Quantity</Text>
-              <View style={{flexDirection: 'row', marginLeft: 10}}>
-                <Text style={style.cardtextunderline}>9 Tons</Text>
-              </View>
-            </View>
-
-            <View style={{marginTop: 10}}>
-              <View style={{flexDirection: 'row'}}>
-                <Text style={style.cardtext}>Date</Text>
-                <View style={{flexDirection: 'row', marginLeft: 10}}>
-                  <Text style={style.cardtextunderline}>18/07/2020</Text>
-                  <Icon name="calendar" style={{marginLeft: 20}}></Icon>
-                </View>
-              </View>
-            </View>
-          </View>
-        </View>
-      </View>
-      <View style={{flexDirection: 'row'}}>
-        <View style={{flex: 1}}>
-          <TouchableOpacity
-            style={{
-              backgroundColor: '#F99F23',
-              margin: 5,
-              width: null,
-              height: 40,
-              borderRadius: 5,
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}>
-            <Text style={{color: 'white'}}>Add</Text>
           </TouchableOpacity>
         </View>
+        <View style={style.cardContentView}>
+          <View>
+            <Text style={style.cardText}>
+              Combed, Compact, Ring, Frame, Weaving
+            </Text>
+          </View>
+          <View>
+            <Text style={style.cardTitle}>SINTEX Mills</Text>
+          </View>
+        </View>
+        <View style={style.qtyTextView}>
+          <TouchableOpacity onPress={() => planExpand()}>
+            <Icon
+              name={plan ? 'keyboard-arrow-up' : 'keyboard-arrow-down'}
+              size={30}
+              color={'#E18335'}
+            />
+          </TouchableOpacity>
+          <View>
+            <Text style={style.qtyText}>9 Tons</Text>
+            <Text style={{color: 'grey', fontSize: 10}}>Pending</Text>
+          </View>
+        </View>
+      </View>
+      <View>
+        {plan && (
+          <View style={{margin: 5}}>
+            <View style={{marginLeft: 70}}>
+              <View style={{flexDirection: 'row'}}>
+                <View style={{height: 12, width: 70}}>
+                  <Text style={style.accodiontext}>Quantity</Text>
+                </View>
+                <View>
+                  <Text style={style.cardtextunderline}>9 Tons</Text>
+                </View>
+              </View>
+              <View style={{flexDirection: 'row', marginTop: 10}}>
+                <View style={{height: 12, width: 70}}>
+                  <Text style={style.accodiontext}>Date</Text>
+                </View>
+                <View>
+                  <Text style={style.cardtextunderline}>20/07/2020</Text>
+                </View>
+                <FeatherIcon
+                  name="calendar"
+                  style={{marginLeft: 10}}></FeatherIcon>
+              </View>
+            </View>
+            <View style={{marginTop: 15}}>
+              <TouchableOpacity
+                style={{
+                  backgroundColor: '#F99F23',
+                  width: null,
+                  height: 40,
+                  borderRadius: 5,
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                <Text style={{color: 'white'}}>Add</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        )}
       </View>
     </Card>
   );
 };
 
 export default PlanDispatchCard;
-
-const style = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#EBF4FA',
-  },
-
-  button: {
-    marginTop: 5,
-    borderRadius: 5,
-    marginLeft: 5,
-    backgroundColor: 'white',
-    height: 30,
-    width: 80,
-    borderRadius: 50,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-
-  mainbutton: {
-    marginTop: 5,
-    borderRadius: 5,
-    marginLeft: 5,
-    backgroundColor: 'orange',
-  },
-
-  text: {
-    color: 'black',
-    fontSize: 8,
-    fontFamily: 'AvenirLTStd-Roman',
-  },
-
-  top_cardtext: {
-    fontSize: 9,
-    fontFamily: 'AvenirLTStd-Roman',
-    color: '#F99F23',
-    margin: 5,
-  },
-
-  cardtext: {
-    fontSize: 9,
-    fontFamily: 'AvenirLTStd-Roman',
-  },
-
-  cardtextunderline: {
-    fontSize: 9,
-    fontFamily: 'AvenirLTStd-Roman',
-    textDecorationLine: 'underline',
-  },
-
-  rowbutton: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
